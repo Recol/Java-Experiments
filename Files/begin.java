@@ -14,7 +14,49 @@ public class begin {
 		 String name = "";
 		String quantity = "";
 		String category = "";
-				 
+	
+		
+		//hashmap declaration// used for avoiding non-itilisation errors//
+		HashMap<String, String> book_stock = new HashMap<String, String>(); //generate book hashmaps 
+		HashMap<String, String> book_stock2 = new HashMap<String, String>(); 
+		HashMap<String, String> book_stock3 = new HashMap<String, String>();
+		
+		HashMap<String, String> cd_stock = new HashMap<String, String>(); //generate CD hashmaps 
+		HashMap<String, String> cd_stock2 = new HashMap<String, String>(); 
+		HashMap<String, String> cd_stock3 = new HashMap<String, String>();
+		
+		HashMap<String, String> software_stock = new HashMap<String, String>(); //generate software hashmaps 
+		HashMap<String, String> software_stock2 = new HashMap<String, String>();
+		HashMap<String, String> software_stock3 = new HashMap<String, String>(); 
+		
+		HashMap<String, String> hardware_stock = new HashMap<String, String>(); //generate hardware hashmaps
+		HashMap<String, String> hardware_stock2 = new HashMap<String, String>();
+		HashMap<String, String> hardware_stock3 = new HashMap<String, String>();
+		
+		//stock declarations/
+		int new_new_new_tbs = 0;
+		int new_new_new_tcd = 0;
+		int new_new_new_ths = 0;
+		int new_new_new_tss = 0;
+		
+		int new_new_tbs = 0;
+		int new_new_tcd = 0;
+		int new_new_ths = 0;
+		int new_new_tss = 0;
+		
+		int new_tbs = 0;
+		int new_tcd = 0;
+		int new_ths = 0;
+		int new_tss = 0;
+		
+		int tbs = 0;
+		int tcd = 0;
+		int ths = 0;
+		int tss = 0;
+		
+		int total_sum = 0;
+		
+
 	System.out.println("1: Load Stock System");
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
@@ -24,10 +66,6 @@ public class begin {
 	System.out.println("7: Show Re-Order Report");
 	System.out.println("8: Exit");
 
-	Hardware hard = new Hardware();
-	Books book = new Books();
-	Software software = new Software();
-	CD cd = new CD();
 	
 	
 	Scanner input = new Scanner(System.in);
@@ -90,18 +128,18 @@ do {
 			
 	//Hardware Storage//
 			if (category_input.equals("Hardware")); //utilise hashmaps for storing entered stock//
-			HashMap<String, String> hardware_stock = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			hardware_stock.put(item_id, name);
 			hardware_stock.put(description, quantity);
 			hardware_stock.put(price, category);
 			
-			HashMap<String, String> hardware_stock2 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			if(hardware_stock.containsKey(item_id));
 			hardware_stock2.put(item_id, name);
 			hardware_stock2.put(description, quantity);
 			hardware_stock2.put(price, category);
 			
-			HashMap<String, String> hardware_stock3 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			if(hardware_stock2.containsKey(item_id));
 			hardware_stock3.put(item_id, name);
 			hardware_stock3.put(description, quantity);
@@ -110,18 +148,18 @@ do {
 			
 			//Software Storage//
 			if (category_input.equals("Software")); //utilise hashmaps for storing entered stock//
-			HashMap<String, String> software_stock = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			software_stock.put(item_id, name);
 			software_stock.put(description, quantity);
 			software_stock.put(price, category);
 			
-			HashMap<String, String> software_stock2 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+			
 			if(software_stock.containsKey(item_id));
 			software_stock2.put(item_id, name);
 			software_stock2.put(description, quantity);
 			software_stock2.put(price, category);
 			
-			HashMap<String, String> software_stock3 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			if(software_stock2.containsKey(item_id));
 			software_stock3.put(item_id, name);
 			software_stock3.put(description, quantity);
@@ -133,18 +171,17 @@ do {
 			
 			
 			if (category_input.equals("Books")); //utilise hashmaps for storing entered stock//
-			HashMap<String, String> book_stock = new HashMap<String, String>(); //generate hashmaps for editing them later on//
 			book_stock.put(item_id, name);
 			book_stock.put(description, quantity);
 			book_stock.put(price, category);
 			
-			HashMap<String, String> book_stock2 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+			
 			if(book_stock.containsKey(item_id));
 			book_stock2.put(item_id, name);
 			book_stock2.put(description, quantity);
 			book_stock2.put(price, category);
 			
-			HashMap<String, String> book_stock3 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			if(book_stock2.containsKey(item_id));
 			book_stock3.put(item_id, name);
 			book_stock3.put(description, quantity);
@@ -154,18 +191,17 @@ do {
 			//CD storage//
 			
 			if (category_input.equals("CDs")); //utilise hashmaps for storing entered stock//
-			HashMap<String, String> cd_stock = new HashMap<String, String>(); //generate hashmaps for editing them later on//
 			cd_stock.put(item_id, name);
 			cd_stock.put(description, quantity);
 			cd_stock.put(price, category);
 			
-			HashMap<String, String> cd_stock2 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+		
 			if(cd_stock.containsKey(item_id));
 			cd_stock2.put(item_id, name);
 			cd_stock2.put(description, quantity);
 			cd_stock2.put(price, category);
 			
-			HashMap<String, String> cd_stock3 = new HashMap<String, String>(); //generate hashmaps for editing them later on//
+			
 			if(cd_stock2.containsKey(item_id));
 			cd_stock3.put(item_id, name);
 			cd_stock3.put(description, quantity);
@@ -235,18 +271,18 @@ do {
 		if (amended_h_choice == 2);
 		Scanner amend_id_h2 = new Scanner(System.in);
 		System.out.println("Enter Item ID");
-		String amended_id_h2 = amend_id_h.next();
+		String amended_id_h2 = amend_id_h2.next();
 		amended_id_h2 = hardware_stock2.put(ID, amended_id_h2);
 		
 		Scanner amend_name_h2 = new Scanner(System.in);
 		System.out.println("Enter Item Name");
-		String amended_name_h2 = amend_name_h.next();
+		String amended_name_h2 = amend_name_h2.next();
 		amended_name_h2 = hardware_stock2.put(name, amended_name_h2);
 		
 		//description amending//
 		Scanner amend_desc_h2 = new Scanner(System.in);
 		System.out.print("Enter Description");
-		String amended_desc_h2 = amend_desc_h.next();
+		String amended_desc_h2 = amend_desc_h2.next();
 		amended_desc_h2 = hardware_stock2.put(description, amended_desc_h2);
 		
 		//quantity amending//
@@ -269,36 +305,36 @@ do {
 		System.out.print(hardware_stock3);
 		Scanner amend_id_h3 = new Scanner(System.in);
 		System.out.println("Enter Item ID");
-		String amended_id_h3 = amend_id_h.next();
+		String amended_id_h3 = amend_id_h3.next();
 		amended_id_h3 = hardware_stock3.put(ID, amended_id_h3);
 		
 		Scanner amend_name_h3 = new Scanner(System.in);
 		System.out.println("Enter Item Name");
-		String amended_name_h3 = amend_name_h.next();
+		String amended_name_h3 = amend_name_h3.next();
 		amended_name_h3 = hardware_stock3.put(name, amended_name_h3);
 		
 		//description amending//
 		Scanner amend_desc_h3 = new Scanner(System.in);
 		System.out.print("Enter Description");
-		String amended_desc_h3 = amend_desc_h.next();
+		String amended_desc_h3 = amend_desc_h3.next();
 		amended_desc_h = hardware_stock3.put(description, amended_desc_h3);
 		
 		//quantity amending//
 		Scanner amend_quan_h3 = new Scanner(System.in);
 		System.out.println("Enter quantity");
-				String amended_quan_h3 = amend_quan_h.next();
+				String amended_quan_h3 = amend_quan_h3.next();
 				amended_quan_h = hardware_stock3.put(quantity, amended_quan_h3);
 				
 				
 				//price editing//
 				Scanner amend_price_h3 = new Scanner(System.in);
 				System.out.println("Enter Price");
-				String amended_price_h3 = amend_price_h.next();
+				String amended_price_h3 = amend_price_h3.next();
 				amended_price_h3 = hardware_stock3.put(price, amended_price_h3);
 		
 				
 				
-				//software
+				//software choice - present menu, and add to hashmap
 				
 				if (amend_choice_stock.equals("Software"));
 				
@@ -346,25 +382,25 @@ do {
 				if (amended_s_choice == 2);
 				Scanner amend_id_s2 = new Scanner(System.in);
 				System.out.println("Enter Item ID");
-				String amended_id_s2 = amend_id_s.next();
+				String amended_id_s2 = amend_id_s2.next();
 				amended_id_s2 = software_stock2.put(ID, amended_id_s2);
 				
 				Scanner amend_name_s2 = new Scanner(System.in);
 				System.out.println("Enter Item Name");
-				String amended_name_s2 = amend_name_s.next();
+				String amended_name_s2 = amend_name_s2.next();
 				amended_name_s2 = software_stock2.put(name, amended_name_s2);
 				
 				//description amending//
 				Scanner amend_desc_s2 = new Scanner(System.in);
 				System.out.print("Enter Description");
-				String amended_desc_s2 = amend_desc_s.next();
+				String amended_desc_s2 = amend_desc_s2.next();
 				amended_desc_s2 = software_stock2.put(description, amended_desc_s2);
 				
 				//quantity amending//
 				Scanner amend_quan_s2 = new Scanner(System.in);
 				System.out.println("Enter quantity");
 						String amended_quan_s2 = amend_quan_s2.next();
-						amended_quan_s2 = software_stock.put(quantity, amended_quan_s2);
+						amended_quan_s2 = software_stock2.put(quantity, amended_quan_s2);
 						
 						
 						//price editing//
@@ -380,31 +416,31 @@ do {
 				System.out.print(software_stock3);
 				Scanner amend_id_s3 = new Scanner(System.in);
 				System.out.println("Enter Item ID");
-				String amended_id_s3 = amend_id_s.next();
+				String amended_id_s3 = amend_id_s3.next();
 				amended_id_s3 = software_stock3.put(ID, amended_id_s3);
 				
 				Scanner amend_name_s3 = new Scanner(System.in);
 				System.out.println("Enter Item Name");
-				String amended_name_s3 = amend_name_s.next();
+				String amended_name_s3 = amend_name_s3.next();
 				amended_name_s3 = software_stock3.put(name, amended_name_s3);
 				
 				//description amending//
 				Scanner amend_desc_s3 = new Scanner(System.in);
 				System.out.print("Enter Description");
-				String amended_desc_s3 = amend_desc_s.next();
+				String amended_desc_s3 = amend_desc_s3.next();
 				amended_desc_s3 = software_stock3.put(description, amended_desc_s3);
 				
 				//quantity amending//
 				Scanner amend_quan_s3 = new Scanner(System.in);
 				System.out.println("Enter quantity");
-						String amended_quan_s3 = amend_quan_s.next();
+						String amended_quan_s3 = amend_quan_s3.next();
 						amended_quan_s3 = software_stock3.put(quantity, amended_quan_s3);
 						
 						
 						//price editing//
 						Scanner amend_price_s3 = new Scanner(System.in);
 						System.out.println("Enter Price");
-						String amended_price_s3 = amend_price_s.next();
+						String amended_price_s3 = amend_price_s3.next();
 						amended_price_s3 = software_stock3.put(price, amended_price_s3);
 				
 				
@@ -459,18 +495,18 @@ do {
 						if (amended_b_choice == 2);
 						Scanner amend_id_b2 = new Scanner(System.in);
 						System.out.println("Enter Item ID");
-						String amended_id_b2 = amend_id_b.next();
+						String amended_id_b2 = amend_id_b2.next();
 						amended_id_b2 = book_stock2.put(ID, amended_id_b2);
 						
 						Scanner amend_name_b2 = new Scanner(System.in);
 						System.out.println("Enter Item Name");
-						String amended_name_b2 = amend_name_b.next();
+						String amended_name_b2 = amend_name_b2.next();
 						amended_name_b2 = book_stock2.put(name, amended_name_b2);
 						
 						//description amending//
 						Scanner amend_desc_b2 = new Scanner(System.in);
 						System.out.print("Enter Description");
-						String amended_desc_b2 = amend_desc_b.next();
+						String amended_desc_b2 = amend_desc_b2.next();
 						amended_desc_b2 = book_stock2.put(description, amended_desc_b2);
 						
 						//quantity amending//
@@ -493,31 +529,31 @@ do {
 						System.out.print(book_stock3);
 						Scanner amend_id_b3 = new Scanner(System.in);
 						System.out.println("Enter Item ID");
-						String amended_id_b3 = amend_id_b.next();
+						String amended_id_b3 = amend_id_b3.next();
 						amended_id_b3 = book_stock3.put(ID, amended_id_b3);
 						
 						Scanner amend_name_b3 = new Scanner(System.in);
 						System.out.println("Enter Item Name");
-						String amended_name_b3 = amend_name_b.next();
+						String amended_name_b3 = amend_name_b3.next();
 						amended_name_b3 = book_stock3.put(name, amended_name_b3);
 						
 						//description amending//
 						Scanner amend_desc_b3 = new Scanner(System.in);
 						System.out.print("Enter Description");
-						String amended_desc_b3 = amend_desc_b.next();
-						amended_desc_b = book_stock3.put(description, amended_desc_b3);
+						String amended_desc_b3 = amend_desc_b3.next();
+						amended_desc_b3 = book_stock3.put(description, amended_desc_b3);
 						
 						//quantity amending//
 						Scanner amend_quan_b3 = new Scanner(System.in);
 						System.out.println("Enter quantity");
-								String amended_quan_b3 = amend_quan_b.next();
-								amended_quan_b = book_stock3.put(quantity, amended_quan_b3);
+								String amended_quan_b3 = amend_quan_b3.next();
+								amended_quan_b3 = book_stock3.put(quantity, amended_quan_b3);
 								
 								
 								//price editing//
 								Scanner amend_price_b3 = new Scanner(System.in);
 								System.out.println("Enter Price");
-								String amended_price_b3 = amend_price_b.next();
+								String amended_price_b3 = amend_price_b3.next();
 								amended_price_b3 = book_stock3.put(price, amended_price_b3);
 						
 				
@@ -569,18 +605,18 @@ do {
 								if (amended_c_choice == 2);
 								Scanner amend_id_c2 = new Scanner(System.in);
 								System.out.println("Enter Item ID");
-								String amended_id_c2 = amend_id_c.next();
+								String amended_id_c2 = amend_id_c2.next();
 								amended_id_c2 = cd_stock2.put(ID, amended_id_c2);
 								
 								Scanner amend_name_c2 = new Scanner(System.in);
 								System.out.println("Enter Item Name");
-								String amended_name_c2 = amend_name_c.next();
+								String amended_name_c2 = amend_name_c2.next();
 								amended_name_c2 = cd_stock2.put(name, amended_name_c2);
 								
 								//description amending//
 								Scanner amend_desc_c2 = new Scanner(System.in);
 								System.out.print("Enter Description");
-								String amended_desc_c2 = amend_desc_c.next();
+								String amended_desc_c2 = amend_desc_c2.next();
 								amended_desc_c2 = cd_stock2.put(description, amended_desc_c2);
 								
 								//quantity amending//
@@ -603,31 +639,31 @@ do {
 								System.out.print(cd_stock3);
 								Scanner amend_id_c3 = new Scanner(System.in);
 								System.out.println("Enter Item ID");
-								String amended_id_c3 = amend_id_c.next();
+								String amended_id_c3 = amend_id_c3.next();
 								amended_id_c3 = cd_stock3.put(ID, amended_id_c3);
 								
 								Scanner amend_name_c3 = new Scanner(System.in);
 								System.out.println("Enter Item Name");
-								String amended_name_c3 = amend_name_c.next();
+								String amended_name_c3 = amend_name_c3.next();
 								amended_name_c3 = cd_stock3.put(name, amended_name_c3);
 								
 								//description amending//
 								Scanner amend_desc_c3 = new Scanner(System.in);
 								System.out.print("Enter Description");
-								String amended_desc_c3 = amend_desc_c.next();
+								String amended_desc_c3 = amend_desc_c3.next();
 								amended_desc_c = cd_stock3.put(description, amended_desc_c3);
 								
 								//quantity amending//
 								Scanner amend_quan_c3 = new Scanner(System.in);
 								System.out.println("Enter quantity");
-										String amended_quan_c3 = amend_quan_c.next();
+										String amended_quan_c3 = amend_quan_c3.next();
 										amended_quan_c = cd_stock3.put(quantity, amended_quan_c3);
 										
 										
 										//price editing//
 										Scanner amend_price_c3 = new Scanner(System.in);
 										System.out.println("Enter Price");
-										String amended_price_c3 = amend_price_c.next();
+										String amended_price_c3 = amend_price_c3.next();
 										amended_price_c3 = cd_stock3.put(price, amended_price_c3);
 													
 
@@ -682,8 +718,33 @@ do {
 		//Initialise count via fetching stock quantities within Hashmaps//
 		System.out.println("Count Stock Quantity");
 		System.out.println("Books" + book_stock.get(quantity) + book_stock2.get(quantity) + book_stock3.get(quantity));
+		System.out.println("CD/DVDs" + cd_stock.get(quantity) + cd_stock2.get(quantity) + cd_stock3.get(quantity));
 		System.out.println("Software: " + software_stock.get(quantity) + software_stock2.get(quantity) + software_stock3.get(quantity));
 		System.out.println("Hardware " + hardware_stock.get(quantity) + hardware_stock2.get(quantity) + hardware_stock3.get(quantity));
+		
+		//load into single string variable for stock counting//
+		String total_book_stock = book_stock.get(quantity) + book_stock2.get(quantity) + book_stock3.get(quantity);
+		String total_software_stock = software_stock.get(quantity) + software_stock2.get(quantity) + software_stock3.get(quantity);
+		String total_cd_stock = cd_stock.get(quantity) + cd_stock2.get(quantity) + cd_stock3.get(quantity);
+		String total_hardware_stock = hardware_stock.get(quantity) + hardware_stock2.get(quantity) + hardware_stock3.get(quantity); 
+		
+		
+		//Conversion to integers for processing integer operators//
+
+		 tbs = Integer.parseInt(total_book_stock);
+		 tss = Integer.parseInt(total_software_stock);
+		 tcd = Integer.parseInt(total_cd_stock);
+		 ths = Integer.parseInt(total_hardware_stock);
+		
+		
+		int sum_total_stock = tbs + tss;
+		int sum_total_stock2 = tcd + ths;
+		 total_sum = sum_total_stock + sum_total_stock2;
+//sum both amounts//
+		
+		//process as single//
+		
+		//Conversion to integers for processing integer operators//
 		
 		Scanner cs_5 = new Scanner(System.in);
 		System.out.println("1: Exit menu");
@@ -692,23 +753,365 @@ do {
 		
 		break;
 	case "6": 
-	System.out.println("Show Stock Sales Report");
+	
+		System.out.println("Show Stock Sales Report");
+	System.out.println("Please press A-D for what form of the report you would like to view.");
+	//break paragraph
+
+	System.out.println("");
+	Scanner ad_choice = new Scanner(System.in);
+	System.out.println("A: 1 Month");
+	System.out.println("B: 3 Months");
+	System.out.println("C: 6 Months");
+	System.out.println("D: 1 Year");
+	String ad_choice_1 = ad_choice.next();
+	
+	
+	//1 month report//
+	if (ad_choice_1.equals("A"));
+	System.out.println("Stock Sales Report (1 month");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Quantity Sold: " + total_sum/3*2);
+	System.out.println("");
+	
+	System.out.println("Types Sold");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs/3*2);
+	System.out.println("CD/DVDs" + tcd/3*2);
+	System.out.println("Software: " + tss/3*2);
+	System.out.println("Hardware: " + ths/3*2);
+	
+	Scanner echeck = new Scanner(System.in);
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeck_a = echeck.next();
+	
+	
+	//if choose b//
+	if (ad_choice_1.equals("B"));
+	System.out.println("Stock Sales Report (3 Months");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Quantity Sold: " + total_sum/3*4);
+	System.out.println("");
+	
+	System.out.println("Types Sold");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs/3*4);
+	System.out.println("CD/DVDs" + tcd/3*4);
+	System.out.println("Software: " + tss/3*4);
+	System.out.println("Hardware: " + ths/3*4);
+	
+	Scanner echeck_b = new Scanner(System.in);
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckb = echeck_b.next();
+	
+	
+	if (ad_choice_1.equals("C"));
+	
+	System.out.println("Stock Sales Report (6 Months");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Quantity Sold: " + total_sum/3*6);
+	System.out.println("");
+	
+	System.out.println("Types Sold");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs/3*6);
+	System.out.println("CD/DVDs" + tcd/3*6);
+	System.out.println("Software: " + tss/3*6);
+	System.out.println("Hardware: " + ths/3*6);
+	
+	Scanner echeck_c = new Scanner(System.in);
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckc = echeck_c.next();
+	
+	//1 year//
+	if (ad_choice_1.equals("D"));
+	System.out.println("Stock Sales Report (1 Year");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Quantity Sold: " + total_sum/3*12);
+	System.out.println("");
+	
+	System.out.println("Types Sold");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs/3*12);
+	System.out.println("CD/DVDs" + tcd/3*12);
+	System.out.println("Software: " + tss/3*12);
+	System.out.println("Hardware: " + ths/3*12);
+	
+	Scanner echeck_d = new Scanner(System.in);
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckd = echeck_d.next();
+	
+	//break if E is selected//
+	if (ad_choice_1.equals("E"));
+	if (echeckd.equals("E"));
+	if (echeckc.equals("E"));
+	if (echeck_a.equals("E"));
+	if (echeckb.equals("E"));
+	
 	break;
 	
 	case "7":
 		System.out.println("Show Re-Order Report");
+		
+	System.out.println("Please press A-D for what form of the report you would like to view.");
+	//break paragraph
+
+	int automatic_renewal_book = 5;
+	int automatic_renewal_cds = 4;
+	int automatic_renewal_software = 6;
+	int automatic_renewal_hardware = 3;
+	
+	
+	System.out.println("");
+	Scanner ad_choice2 = new Scanner(System.in);
+	System.out.println("A: 1 Month");
+	System.out.println("B: 3 Months");
+	System.out.println("C: 6 Months");
+	System.out.println("D: 1 Year");
+	String ad_choice_2 = ad_choice2.next();
+	
+	
+	if (ad_choice_2.equals("A"));
+	System.out.println("Stock Re-Order Report (1 Month");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Stock Available: " + total_sum);
+	System.out.println("");
+	
+	System.out.println("Types Available");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs);
+	System.out.println("CD/DVDs" + tcd);
+	System.out.println("Software: " + tss);
+	System.out.println("Hardware: " + ths);
+	
+	System.out.println("Automatic Stock Renewal Trigger");
+	System.out.println("");
+	
+	//renewal trigger
+	System.out.println("Books" + automatic_renewal_book);
+	System.out.println("CD/DVDs" + automatic_renewal_cds);
+	System.out.println("Software" + automatic_renewal_software);
+	System.out.println("Hardware" + automatic_renewal_hardware);
+	
+	System.out.println("");
+	System.out.println("Total Stock Adjustments:");
+	
+	System.out.println("Books: 0");
+	System.out.println("CD/DVDs: 0");
+	System.out.println("Software: 0");
+	System.out.println("Hardware: 0");
+	System.out.println("");
+	
+	Scanner echeck_3 = new Scanner(System.in);
+	System.out.println("Press 'E' to exit out of this report.");
+	String echeck_33 = echeck_3.next();
+	
+	
+	
+	
+	//3 months//
+	
+	if (ad_choice_2.equals("B"));
+	
+	//automatic renewal check//
+	
+	if (tbs <= automatic_renewal_book);
+	 new_tbs = tbs *3;
+	
+	if (tcd <= automatic_renewal_cds);
+	 new_tcd = tcd *3;
+	
+	if (tss <= automatic_renewal_software);
+	 new_tss = tss *3;
+	
+	if (ths <= automatic_renewal_hardware);
+	 new_ths = ths *3;
+	
+	System.out.println("Stock Re-Order Report (3 Months");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Stock Available: " + total_sum);
+	System.out.println("");
+	
+	System.out.println("Types Available");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs);
+	System.out.println("CD/DVDs" + tcd);
+	System.out.println("Software: " + tss);
+	System.out.println("Hardware: " + ths);
+	
+	System.out.println("Automatic Stock Renewal Trigger");
+	System.out.println("");
+	
+	//renewal trigger
+	System.out.println("Books" + automatic_renewal_book);
+	System.out.println("CD/DVDs" + automatic_renewal_cds);
+	System.out.println("Software" + automatic_renewal_software);
+	System.out.println("Hardware" + automatic_renewal_hardware);
+	
+	System.out.println("");
+	System.out.println("Total Stock Adjustments:");
+	
+	System.out.println("Books: " + new_tbs);
+	System.out.println("CD/DVDs: " + new_tcd);
+	System.out.println("Software: " + new_tss);
+	System.out.println("Hardware: " + new_ths);
+	System.out.println("");
+	
+	
+	
+	Scanner echeck_2 = new Scanner(System.in);
+	System.out.println("Press 'E' to exit out of this report.");
+	String echeck_22 = echeck_2.next();
+	
+	//6 months//
+	
+	if (ad_choice_2.equals("C"));
+	
+	//automatic renewal check//
+	
+	if (new_tbs <= automatic_renewal_book);
+	 new_new_tbs = tbs *6;
+	
+	if (new_tcd <= automatic_renewal_cds);
+	 new_new_tcd = tcd *6;
+	
+	if (new_tss <= automatic_renewal_software);
+	 new_new_tss = tss *6;
+	
+	if (new_ths <= automatic_renewal_hardware);
+	 new_new_ths = ths *6;
+	
+	System.out.println("Stock Re-Order Report (6 Months");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Stock Available: " + total_sum);
+	System.out.println("");
+	
+	System.out.println("Types Available");
+	System.out.println("");
+	
+	System.out.println("Books: " + new_tbs);
+	System.out.println("CD/DVDs" + new_tcd);
+	System.out.println("Software: " + new_tss);
+	System.out.println("Hardware: " + new_ths);
+	
+	System.out.println("Automatic Stock Renewal Trigger");
+	System.out.println("");
+	
+	//renewal trigger
+	System.out.println("Books" + automatic_renewal_book);
+	System.out.println("CD/DVDs" + automatic_renewal_cds);
+	System.out.println("Software" + automatic_renewal_software);
+	System.out.println("Hardware" + automatic_renewal_hardware);
+	
+	System.out.println("");
+	System.out.println("Total Stock Adjustments:");
+	
+	System.out.println("Books: " + new_new_tbs);
+	System.out.println("CD/DVDs: " + new_new_tcd);
+	System.out.println("Software: " + new_new_tss);
+	System.out.println("Hardware: " + new_new_ths);
+	System.out.println("");
+	
+	
+	
+	Scanner echeck_4 = new Scanner(System.in);
+	System.out.println("Press 'E' to exit out of this report.");
+	String echeck_44 = echeck_4.next();
+	
+	//1 Year//
+	
+	if (ad_choice_2.equals("D"));
+	
+	//automatic renewal check//
+	
+	if (new_new_tbs >= automatic_renewal_book);
+	new_new_new_tbs = tbs *12;
+	
+	if (new_new_tcd >= automatic_renewal_cds);
+	 new_new_new_tcd = tcd *12;
+	
+	if (new_new_tss >= automatic_renewal_software);
+	 new_new_new_tss = tss *12;
+	
+	if (new_new_ths >= automatic_renewal_hardware);
+	 new_new_new_ths = ths *12;
+	
+	System.out.println("Stock Re-Order Report (1 Year");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Stock Available: " + total_sum);
+	System.out.println("");
+	
+	System.out.println("Types Available");
+	System.out.println("");
+	
+	System.out.println("Books: " + new_new_tbs);
+	System.out.println("CD/DVDs" + new_new_tcd);
+	System.out.println("Software: " + new_new_tss);
+	System.out.println("Hardware: " + new_new_ths);
+	
+	System.out.println("Automatic Stock Renewal Trigger");
+	System.out.println("");
+	
+	//renewal trigger
+	System.out.println("Books" + automatic_renewal_book);
+	System.out.println("CD/DVDs" + automatic_renewal_cds);
+	System.out.println("Software" + automatic_renewal_software);
+	System.out.println("Hardware" + automatic_renewal_hardware);
+	
+	System.out.println("");
+	System.out.println("Total Stock Adjustments:");
+	
+	System.out.println("Books: " + new_new_new_tbs);
+	System.out.println("CD/DVDs: " + new_new_new_tcd);
+	System.out.println("Software: " + new_new_new_tss);
+	System.out.println("Hardware: " + new_new_new_ths);
+	System.out.println("");
+	
+	
+	
+	Scanner echeck_5 = new Scanner(System.in);
+	System.out.println("Press 'E' to exit out of this report.");
+	String echeck_55 = echeck_5.next();
+	
+	
+	if (echeck_44.equals("E"));
+	if (echeck_22.equals("E"));
+	if (echeck_33.equals("E"));
+	if (echeck_55.equals("E"));
+	if (ad_choice_2.equals("E"));
+	
+	
 		break;
 	
 	case "8": 
 		System.out.println("Exit");
+		System.exit(0);
+		input.close();
 		break;
 	}
 }while (!option.equals("8"));
-	
-
-	 
-
-	
 	
 	}
 
