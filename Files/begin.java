@@ -708,7 +708,7 @@ System.out.println("Enter your choice:");
 		Scanner yn = new Scanner(System.in);
 		System.out.println("Are you sure you want to delete this item? 'Y' or 'N'");
 		String ynn = yn.next();
-		while (ynn != "N");
+		if (ynn == "Y");
 		System.out.println("Item details have been deleted.");
 		//focus clearance on choice//
 		if (list_choice_del_o == 1);
@@ -726,7 +726,7 @@ System.out.println("Enter your choice:");
 		if (list_choice_del_o == 5);
 		software_stock2.clear();
 		
-	
+		if (ynn == "N");
 		if (delete_stock_o == 2);
 		System.out.println("2: Create New Stock Entry");
 		System.out.println("3: Amend Stock Details");
