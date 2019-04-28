@@ -84,12 +84,12 @@ do {
 		
 		
 		Scanner new_stock = new Scanner(System.in);
-		System.out.println("Enter \"1\", \"2\" or \"3\"");
+		System.out.println("Enter \"1\" or \"2\"");
 		
 		
 		int stock_choice = new_stock.nextInt();
 		Scanner item_id_input = new Scanner(System.in);	
-		while (stock_choice != 2)
+		if (stock_choice == 1)
 			System.out.println("Please enter Item ID");
 			item_id = item_id_input.next(); 
 			
@@ -206,7 +206,7 @@ do {
 			cd_stock3.put(price, category);
 			
 			
-		
+		if (stock_choice==2);
 		break;
 	case "3":
 		System.out.println("Amend Stock Details");
@@ -217,7 +217,7 @@ do {
 		
 		
 		int amend_choice = amend_stock.nextInt();
-		while (amend_choice !=2);
+		if (amend_choice ==1);
 		
 		//Hardware//
 		
@@ -664,7 +664,7 @@ do {
 										String amended_price_c3 = amend_price_c3.next();
 										amended_price_c3 = cd_stock3.put(price, amended_price_c3);
 													
-
+if (amend_choice == 2);
 				
 				
 		
@@ -676,7 +676,7 @@ do {
 		System.out.println("1: Delete an item");
 		System.out.println("2: Exit the menu");
 		int delete_stock_o = delete_stock.nextInt();
-		while (delete_stock_o != 2);
+		if (delete_stock_o == 1);
 		
 		Scanner list_choice_del = new Scanner(System.in);
 		System.out.println("Select an option from the list");
@@ -709,8 +709,10 @@ do {
 		
 		if (list_choice_del_o == 5);
 		software_stock2.clear();
-		break;
+		
 	
+		if (delete_stock_o == 2);
+		break;
 	case "5":
 		
 		//Initialise count via fetching stock quantities within Hashmaps//
