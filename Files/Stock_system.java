@@ -9,7 +9,6 @@ public class Stock_system {
 		 
 		 String item_id = "";
 		 String price = "";
-		 String ID = "";
 		 String description = "";
 		 String name = "";
 		String quantity = "";
@@ -267,6 +266,7 @@ do {
 		//Hardware//
 		
 		Scanner amend_choice_stock = new Scanner(System.in);
+		
 		System.out.println("What category do you want to amend? (Hardware/Software/CD/Books");
 		if (amend_choice_stock.equals("Hardware"));
 		
@@ -310,8 +310,20 @@ do {
 				System.out.println("Enter Price");
 				String amended_price_h = amend_price_h.next();
 				amended_price_h = hardware_stock.put("price", amended_price_h);
+				
+				Scanner amend_choice_stock2 = new Scanner(System.in);
+				
+				System.out.println("What category do you want to amend? (Hardware/Software/CD/Books");
+				if (amend_choice_stock2.equals("Hardware"));
+				
+				Scanner amend_h_choice2 = new Scanner(System.in);
+				System.out.println("Select an item from the list:");
+				System.out.println("1.  hardware_stock");
+				System.out.println("2. hardware_stock2");
+				System.out.println("3. hardware_stock3");
+				int amended_h_choice2 = amend_h_choice2.nextInt();
 		
-		if (amended_h_choice == 2);
+		if (amended_h_choice2 == 2);
 		Scanner amend_id_h2 = new Scanner(System.in);
 		System.out.println("Enter Item ID");
 		String amended_id_h2 = amend_id_h2.next();
@@ -341,10 +353,21 @@ do {
 				String amended_price_h2 = amend_price_h2.next();
 				amended_price_h2 = hardware_stock2.put("price", amended_price_h2);
 		
-		
+				Scanner amend_choice_stock3 = new Scanner(System.in);
+				
+				System.out.println("What category do you want to amend? (Hardware/Software/CD/Books");
+				if (amend_choice_stock3.equals("Hardware"));
+				
+				Scanner amend_h_choice3 = new Scanner(System.in);
+				System.out.println("Select an item from the list:");
+				System.out.println("1.  hardware_stock");
+				System.out.println("2. hardware_stock2");
+				System.out.println("3. hardware_stock3");
+				System.out.println("4: Exit");
+				int amended_h_choice3 = amend_h_choice3.nextInt();
 				
 				//3rd hardware//
-		if (amended_h_choice == 3);
+		if (amended_h_choice3 == 3);
 		System.out.print(hardware_stock3);
 		Scanner amend_id_h3 = new Scanner(System.in);
 		System.out.println("Enter Item ID");
@@ -421,8 +444,16 @@ do {
 						System.out.println("Enter Price");
 						String amended_price_s = amend_price_s.next();
 						amended_price_s = software_stock.put("price", amended_price_s);
-				
-				if (amended_s_choice == 2);
+			
+						Scanner amend_s_choice2 = new Scanner(System.in);
+						System.out.println("Select an item from the list:");
+						System.out.println("1.  software_stock");
+						System.out.println("2. software_stock2");
+						System.out.println("3. software_stock3");
+						System.out.println("4: Exit");
+						int amended_s_choice2 = amend_s_choice2.nextInt();
+						
+				if (amended_s_choice2 == 2);
 				Scanner amend_id_s2 = new Scanner(System.in);
 				System.out.println("Enter Item ID");
 				String amended_id_s2 = amend_id_s2.next();
@@ -453,9 +484,15 @@ do {
 						amended_price_s2 = software_stock2.put("price", amended_price_s2);
 				
 				
-						
+						Scanner amend_s_choice3 = new Scanner(System.in);
+						System.out.println("Select an item from the list:");
+						System.out.println("1.  software_stock");
+						System.out.println("2. software_stock2");
+						System.out.println("3. software_stock3");
+						System.out.println("4: Exit");
+						int amended_s_choice3 = amend_s_choice3.nextInt();		
 						//3rd software//
-				if (amended_s_choice == 3);
+				if (amended_s_choice3 == 3);
 				System.out.print(software_stock3);
 				Scanner amend_id_s3 = new Scanner(System.in);
 				System.out.println("Enter Item ID");
@@ -535,7 +572,17 @@ do {
 								String amended_price_b = amend_price_b.next();
 								amended_price_b = book_stock.put("price", amended_price_b);
 						
-						if (amended_b_choice == 2);
+					
+								Scanner amend_b_choice2 = new Scanner(System.in);
+								System.out.println("Select an item from the list:");
+								System.out.println("1. book_stock");
+								System.out.println("2. book_stock2");
+								System.out.println("3. book_stock3");
+								System.out.println("4: Exit");
+								int amended_b_choice2 = amend_b_choice2.nextInt();
+								
+								
+								if (amended_b_choice2 == 2);
 						Scanner amend_id_b2 = new Scanner(System.in);
 						System.out.println("Enter Item ID");
 						String amended_id_b2 = amend_id_b2.next();
@@ -565,10 +612,17 @@ do {
 								String amended_price_b2 = amend_price_b2.next();
 								amended_price_b2 = book_stock2.put("price", amended_price_b2);
 						
-						
+								Scanner amend_b_choice3 = new Scanner(System.in);
+								System.out.println("Select an item from the list:");
+								System.out.println("1. book_stock");
+								System.out.println("2. book_stock2");
+								System.out.println("3. book_stock3");
+								System.out.println("4: Exit");
+								int amended_b_choice3 = amend_b_choice3.nextInt();
+								
 								
 								//3rd book//
-						if (amended_b_choice == 3);
+						if (amended_b_choice3 == 3);
 						System.out.print(book_stock3);
 						Scanner amend_id_b3 = new Scanner(System.in);
 						System.out.println("Enter Item ID");
@@ -609,6 +663,7 @@ do {
 								System.out.println("1. cd_stock");
 								System.out.println("2. cd_stock2");
 								System.out.println("3. cd_stock3");
+								System.out.println("Exit");
 								int amended_c_choice = amend_c_choice.nextInt();
 								
 								//id amending
@@ -645,7 +700,15 @@ do {
 										String amended_price_c = amend_price_c.next();
 										amended_price_c = cd_stock.put("price", amended_price_c);
 								
-								if (amended_c_choice == 2);
+										Scanner amend_c_choice2 = new Scanner(System.in);
+										System.out.println("Select an item from the list:");
+										System.out.println("1. cd_stock");
+										System.out.println("2. cd_stock2");
+										System.out.println("3. cd_stock3");
+										System.out.println("Exit");
+										int amended_c_choice2 = amend_c_choice2.nextInt();
+										
+								if (amended_c_choice2 == 2);
 								Scanner amend_id_c2 = new Scanner(System.in);
 								System.out.println("Enter Item ID");
 								String amended_id_c2 = amend_id_c2.next();
@@ -675,10 +738,16 @@ do {
 										String amended_price_c2 = amend_price_c2.next();
 										amended_price_c2 = cd_stock2.put("price", amended_price_c2);
 								
-								
+										Scanner amend_c_choice3 = new Scanner(System.in);
+										System.out.println("Select an item from the list:");
+										System.out.println("1. cd_stock");
+										System.out.println("2. cd_stock2");
+										System.out.println("3. cd_stock3");
+										System.out.println("4: Exit");
+										int amended_c_choice3 = amend_c_choice3.nextInt();
 										
 										//3rd cd//
-								if (amended_c_choice == 3);
+								if (amended_c_choice3 == 3);
 								System.out.print(cd_stock3);
 								Scanner amend_id_c3 = new Scanner(System.in);
 								System.out.println("Enter Item ID");
@@ -1143,7 +1212,7 @@ System.out.println("Enter your choice:");
 	if (new_new_ths >= automatic_renewal_hardware);
 	 new_new_new_ths = ths *12;
 	
-	System.out.println("Stock Re-Order Report (1 Year");
+	System.out.println("Stock Re-Order Report (1 Year)");
 	//line separators//
 	System.out.println("");
 	
@@ -1208,8 +1277,8 @@ System.out.println("Enter your choice:");
 		input.close();
 		break;
 	}
-}while (!option.equals("8"));
+	 }while (!option.equals("8"));
 	
-	}
+	
+}}
 
-}
