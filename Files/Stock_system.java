@@ -914,20 +914,20 @@ System.out.println("Enter your choice:");
 	
 	//1 month report//
 	if (ad_choice_1.equals("A"));
-	System.out.println("Stock Sales Report (1 month");
+	System.out.println("Stock Sales Report (1 month)");
 	//line separators//
 	System.out.println("");
 	
-	System.out.println("Total Quantity Sold: " + total_sum/3*2);
+	System.out.println("Total Quantity Sold: " + total_sum*2);
 	System.out.println("");
 	
 	System.out.println("Types Sold");
 	System.out.println("");
 	
-	System.out.println("Books: " + tbs/3*2);
-	System.out.println("CD/DVDs" + tcd/3*2);
-	System.out.println("Software: " + tss/3*2);
-	System.out.println("Hardware: " + ths/3*2);
+	System.out.println("Books: " + tbs);
+	System.out.println("CD/DVDs" + tcd*2);
+	System.out.println("Software: " + tss*2);
+	System.out.println("Hardware: " + ths*2);
 	
 	Scanner echeck = new Scanner(System.in);
 	System.out.println("Press 'E' to return to the prior menu");
@@ -940,16 +940,16 @@ System.out.println("Enter your choice:");
 	//line separators//
 	System.out.println("");
 	
-	System.out.println("Total Quantity Sold: " + total_sum/3*4);
+	System.out.println("Total Quantity Sold: " + total_sum*4/2);
 	System.out.println("");
 	
 	System.out.println("Types Sold");
 	System.out.println("");
 	
-	System.out.println("Books: " + tbs/3*4);
-	System.out.println("CD/DVDs" + tcd/3*4);
-	System.out.println("Software: " + tss/3*4);
-	System.out.println("Hardware: " + ths/3*4);
+	System.out.println("Books: " + tbs*12/2);
+	System.out.println("CD/DVDs" + tcd*12/2);
+	System.out.println("Software: " + tss*12/2);
+	System.out.println("Hardware: " + ths*12/2);
 	
 	Scanner echeck_b = new Scanner(System.in);
 	System.out.println("Press 'E' to return to the prior menu");
@@ -962,16 +962,16 @@ System.out.println("Enter your choice:");
 	//line separators//
 	System.out.println("");
 	
-	System.out.println("Total Quantity Sold: " + total_sum/3*6);
+	System.out.println("Total Quantity Sold: " + total_sum*8/2);
 	System.out.println("");
 	
 	System.out.println("Types Sold");
 	System.out.println("");
 	
-	System.out.println("Books: " + tbs/3*6);
-	System.out.println("CD/DVDs" + tcd/3*6);
-	System.out.println("Software: " + tss/3*6);
-	System.out.println("Hardware: " + ths/3*6);
+	System.out.println("Books: " + tbs*8/2);
+	System.out.println("CD/DVDs" + tcd*8/2);
+	System.out.println("Software: " + tss*8/2);
+	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_c = new Scanner(System.in);
 	System.out.println("Press 'E' to return to the prior menu");
@@ -983,16 +983,16 @@ System.out.println("Enter your choice:");
 	//line separators//
 	System.out.println("");
 	
-	System.out.println("Total Quantity Sold: " + total_sum/3*12);
+	System.out.println("Total Quantity Sold: " + total_sum*12/2);
 	System.out.println("");
 	
 	System.out.println("Types Sold");
 	System.out.println("");
 	
-	System.out.println("Books: " + tbs/3*12);
-	System.out.println("CD/DVDs" + tcd/3*12);
-	System.out.println("Software: " + tss/3*12);
-	System.out.println("Hardware: " + ths/3*12);
+	System.out.println("Books: " + tbs*12/2);
+	System.out.println("CD/DVDs" + tcd*12/2);
+	System.out.println("Software: " + tss*12/2);
+	System.out.println("Hardware: " + ths*12/2);
 	
 	Scanner echeck_d = new Scanner(System.in);
 	System.out.println("Press 'E' to return to the prior menu");
@@ -1136,7 +1136,7 @@ System.out.println("Enter your choice:");
 	Scanner echeck_2 = new Scanner(System.in);
 	System.out.println("Press 'E' to exit out of this report.");
 	String echeck_22 = echeck_2.next();
-	
+
 	//6 months//
 	
 	if (ad_choice_2.equals("C"));
