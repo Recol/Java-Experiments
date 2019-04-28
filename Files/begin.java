@@ -77,9 +77,7 @@ public class begin {
 do {
 	option = input.nextLine();	
 	switch (option) {
-	case "1":
-		System.out.println("Load Stock System");
-		break;
+	
 	case "2": 
 		System.out.println("1: Add a stock item");
 		System.out.println("2: Exit to main menu");	
