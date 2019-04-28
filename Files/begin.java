@@ -113,16 +113,16 @@ do {
 			price = input_price.next();
 			
 			Scanner category_input = new Scanner(System.in);
-			System.out.println("Please type in a category (Hardware/Software/CDs/Books");
+			System.out.println("Please type in a category (Hardware/Software/CDs/Books)");
 			category = category_input.next();
 			
-			
-			System.out.println("Item Added:" + item_id);
+			System.out.println("");
+			System.out.println("Item Added: " + item_id);
 			System.out.println("Name: " + name);
 			System.out.println("Description " + description);
 			System.out.println("Quantity" + quantity);
 			System.out.println("Price " + price);
-			System.out.println("Your stock item will be stored as stock_h_1, use this for editing the stock.");
+			System.out.println("");
 			
 	//Hardware Storage//
 			if (category_input.equals("Hardware")); //utilise hashmaps for storing entered stock//
@@ -207,6 +207,15 @@ do {
 			
 			
 		if (stock_choice==2);
+		System.out.println("2: Create New Stock Entry");
+		System.out.println("3: Amend Stock Details");
+		System.out.println("4: Delete Stock Details");
+		System.out.println("5: Count Stock Quantity");
+		System.out.println("6: Show Stock Sales Report");
+		System.out.println("7: Show Re-Order Report");
+		System.out.println("8: Exit");
+		System.out.println("Enter your choice:");
+		
 		break;
 	case "3":
 		System.out.println("Amend Stock Details");
@@ -665,7 +674,14 @@ do {
 										amended_price_c3 = cd_stock3.put(price, amended_price_c3);
 													
 if (amend_choice == 2);
-				
+System.out.println("2: Create New Stock Entry");
+System.out.println("3: Amend Stock Details");
+System.out.println("4: Delete Stock Details");
+System.out.println("5: Count Stock Quantity");
+System.out.println("6: Show Stock Sales Report");
+System.out.println("7: Show Re-Order Report");
+System.out.println("8: Exit");
+System.out.println("Enter your choice:");
 				
 		
 		break;
@@ -712,6 +728,15 @@ if (amend_choice == 2);
 		
 	
 		if (delete_stock_o == 2);
+		System.out.println("2: Create New Stock Entry");
+		System.out.println("3: Amend Stock Details");
+		System.out.println("4: Delete Stock Details");
+		System.out.println("5: Count Stock Quantity");
+		System.out.println("6: Show Stock Sales Report");
+		System.out.println("7: Show Re-Order Report");
+		System.out.println("8: Exit");
+		System.out.println("Enter your choice:");
+		
 		break;
 	case "5":
 		
@@ -749,8 +774,15 @@ if (amend_choice == 2);
 		Scanner cs_5 = new Scanner(System.in);
 		System.out.println("1: Exit menu");
 		int cs_5_2 = cs_5.nextInt();
-		if (cs_5_2 == 5);
-		
+		if (cs_5_2 == 1);
+		System.out.println("2: Create New Stock Entry");
+		System.out.println("3: Amend Stock Details");
+		System.out.println("4: Delete Stock Details");
+		System.out.println("5: Count Stock Quantity");
+		System.out.println("6: Show Stock Sales Report");
+		System.out.println("7: Show Re-Order Report");
+		System.out.println("8: Exit");
+		System.out.println("Enter your choice:");
 		break;
 	case "6": 
 	
@@ -859,6 +891,15 @@ if (amend_choice == 2);
 	if (echeckc.equals("E"));
 	if (echeck_a.equals("E"));
 	if (echeckb.equals("E"));
+	
+	System.out.println("2: Create New Stock Entry");
+	System.out.println("3: Amend Stock Details");
+	System.out.println("4: Delete Stock Details");
+	System.out.println("5: Count Stock Quantity");
+	System.out.println("6: Show Stock Sales Report");
+	System.out.println("7: Show Re-Order Report");
+	System.out.println("8: Exit");
+	System.out.println("Enter your choice:");
 	
 	break;
 	
@@ -1102,6 +1143,14 @@ if (amend_choice == 2);
 	if (echeck_55.equals("E"));
 	if (ad_choice_2.equals("E"));
 	
+	System.out.println("2: Create New Stock Entry");
+	System.out.println("3: Amend Stock Details");
+	System.out.println("4: Delete Stock Details");
+	System.out.println("5: Count Stock Quantity");
+	System.out.println("6: Show Stock Sales Report");
+	System.out.println("7: Show Re-Order Report");
+	System.out.println("8: Exit");
+	System.out.println("Enter your choice:");
 	
 		break;
 	
