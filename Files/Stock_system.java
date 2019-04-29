@@ -962,9 +962,9 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*2);
 	
 	Scanner echeck = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
-	String echeck_a = echeck.next();
-	if (echeck_a == check_e);
+	System.out.println("Press '5' to return to the prior menu");
+	int echeck_a = echeck.nextInt();
+
  
 
 	//if choose b//
@@ -985,8 +985,8 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*12/2);
 	
 	Scanner echeck_b = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
-	String echeckb = echeck_b.next();
+	System.out.println("Press '5' to return to the prior menu");
+	int echeckb = echeck_b.nextInt();
 	
 	
 	if (ad_choice_1 == 3);
@@ -1007,8 +1007,8 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_c = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
-	String echeckc = echeck_c.next();
+	System.out.println("Press '5' to return to the prior menu");
+	int echeckc = echeck_c.nextInt();
 	
 	//1 year//
 	if (ad_choice_1 == 4);
@@ -1028,15 +1028,15 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*12/2);
 	
 	Scanner echeck_d = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
-	String echeckd = echeck_d.next();
+	System.out.println("Press '5' to return to the prior menu");
+	int echeckd = echeck_d.nextInt();
 	
 	//break if E is selected//
 	if (ad_choice_1 == 5);
-	if (echeckd.equals(check_e));
-	if (echeckc.equals(check_e));
-	if (echeck_a.equals(check_e));
-	if (echeckb.equals(check_e));
+	if (echeckd == 5);
+	if (echeckc == 5);
+	if (echeck_a == 5);
+	if (echeckb == 5);
 	
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
@@ -1054,7 +1054,7 @@ System.out.println("Enter your choice:");
 	case "7":
 		System.out.println("Show Re-Order Report");
 		
-	System.out.println("Please press A-D for what form of the report you would like to view.");
+	System.out.println("Please press 1-4 for what form of the report you would like to view.");
 	//break paragraph
 
 	int automatic_renewal_book = 5;
@@ -1065,14 +1065,14 @@ System.out.println("Enter your choice:");
 	
 	System.out.println("");
 	Scanner ad_choice2 = new Scanner(System.in);
-	System.out.println("A: 1 Month");
-	System.out.println("B: 3 Months");
-	System.out.println("C: 6 Months");
-	System.out.println("D: 1 Year");
-	String ad_choice_2 = ad_choice2.next();
+	System.out.println("1: 1 Month");
+	System.out.println("2: 3 Months");
+	System.out.println("3: 6 Months");
+	System.out.println("4: 1 Year");
+	int ad_choice_2 = ad_choice2.nextInt();
 	
 	
-	if (ad_choice_2.equals(check_a));
+	if (ad_choice_2 == 1);
 	System.out.println("Stock Re-Order Report (1 Month");
 	//line separators//
 	System.out.println("");
@@ -1115,7 +1115,7 @@ System.out.println("Enter your choice:");
 	
 	//3 months//
 	
-	if (ad_choice_2.equals(check_b));
+	if (ad_choice_2 == 2);
 	
 	//automatic renewal check//
 	
@@ -1172,7 +1172,7 @@ System.out.println("Enter your choice:");
 
 	//6 months//
 	
-	if (ad_choice_2.equals(check_c));
+	if (ad_choice_2 == 3);
 	
 	//automatic renewal check//
 	
@@ -1229,7 +1229,7 @@ System.out.println("Enter your choice:");
 	
 	//1 Year//
 	
-	if (ad_choice_2.equals(check_d));
+	if (ad_choice_2 == 4);
 	
 	//automatic renewal check//
 	
@@ -1289,7 +1289,7 @@ System.out.println("Enter your choice:");
 	if (echeck_22.equals(check_e));
 	if (echeck_33.equals(check_e));
 	if (echeck_55.equals(check_e));
-	if (ad_choice_2.equals(check_e));
+	if (ad_choice_2 == 5);
 	
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
