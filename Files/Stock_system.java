@@ -83,7 +83,7 @@ public class Stock_system {
 	Scanner input = new Scanner(System.in);
 	
 
-	System.out.println("Enter your choice");
+	System.out.println("Enter your choice:");
 	
 
 do {
@@ -955,7 +955,7 @@ System.out.println("Enter your choice:");
 	
 	//1 month report//
 	if (ad_choice_1 == 1);
-	System.out.println("Stock Sales Report (1 month)");
+	System.out.println("Stock Sales Report (1 Month)");
 	//line separators//
 	System.out.println("");
 	
@@ -978,7 +978,7 @@ System.out.println("Enter your choice:");
 
 	//if choose b//
 	if (ad_choice_1 == 2);
-	System.out.println("Stock Sales Report (3 Months");
+	System.out.println("Stock Sales Report (3 Months)");
 	//line separators//
 	System.out.println("");
 	
@@ -1000,7 +1000,7 @@ System.out.println("Enter your choice:");
 	
 	if (ad_choice_1 == 3);
 	
-	System.out.println("Stock Sales Report (6 Months");
+	System.out.println("Stock Sales Report (6 Months)");
 	//line separators//
 	System.out.println("");
 	
@@ -1021,7 +1021,7 @@ System.out.println("Enter your choice:");
 	
 	//1 year//
 	if (ad_choice_1 == 4);
-	System.out.println("Stock Sales Report (1 Year");
+	System.out.println("Stock Sales Report (1 Year)");
 	//line separators//
 	System.out.println("");
 	
@@ -1082,7 +1082,7 @@ System.out.println("Enter your choice:");
 	
 	
 	if (ad_choice_2 == 1);
-	System.out.println("Stock Re-Order Report (1 Month");
+	System.out.println("Stock Re-Order Report (1 Month)");
 	//line separators//
 	System.out.println("");
 	
@@ -1140,7 +1140,7 @@ System.out.println("Enter your choice:");
 	if (ths <= automatic_renewal_hardware);
 	 new_ths = ths *3;
 	
-	System.out.println("Stock Re-Order Report (3 Months");
+	System.out.println("Stock Re-Order Report (3 Months)");
 	//line separators//
 	System.out.println("");
 	
@@ -1197,7 +1197,7 @@ System.out.println("Enter your choice:");
 	if (new_ths <= automatic_renewal_hardware);
 	 new_new_ths = ths *6;
 	
-	System.out.println("Stock Re-Order Report (6 Months");
+	System.out.println("Stock Re-Order Report (6 Months)");
 	//line separators//
 	System.out.println("");
 	
