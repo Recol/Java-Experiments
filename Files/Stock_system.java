@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.HashMap;
 
 public class Stock_system {
-	 @SuppressWarnings("unlikely-arg-type")
+	 @SuppressWarnings({ "unlikely-arg-type", "unused" })
 	public static void main(String[] args) {
 	
 		 String option = "";
@@ -138,9 +138,10 @@ do {
 			System.out.println("");
 			
 	//Hardware Storage//
-			if (category_o.equals(check_h)); //utilise hashmaps for storing entered stock//
-		
-			hardware_stock.put("item_id", item_id);
+			
+			 if (category_o.equals(check_h)); //utilise hashmaps for storing entered stock/
+			 {
+			 hardware_stock.put("item_id", item_id);
 			hardware_stock.put("description", description);
 			hardware_stock.put("price", price);
 			hardware_stock.put("quantity", quantity);
@@ -165,10 +166,11 @@ do {
 			hardware_stock3.put("price", price);
 			hardware_stock3.put("category", category);
 			
+			 }
 			
 			//Software Storage//
-			if (category_o.equals(check_s)); //utilise hashmaps for storing entered stock//
-		
+		  if (category_o.equals(check_s)); //utilise hashmaps for storing entered stock//
+		  {
 			software_stock.put("item_id",item_id);
 			software_stock.put("name", name);
 			software_stock.put("description", description);
@@ -193,13 +195,14 @@ do {
 			software_stock3.put("quantity", quantity);
 			software_stock3.put("price", price);
 			software_stock3.put("category", category);
-			
+		  }
 		
 			
 			//Book storage//
 			
 			
 			if (category_o.equals(check_b)); //utilise hashmaps for storing entered stock//
+			{
 			book_stock.put("ID", item_id);
 			book_stock.put("name", name);
 			book_stock.put("description", description);
@@ -224,10 +227,11 @@ do {
 			book_stock3.put("quantity", quantity);
 			book_stock3.put("price", price);
 			book_stock3.put("category", category);
-			
+			}
 			//CD storage//
 			
 			if (category_input.equals(check_cd)); //utilise hashmaps for storing entered stock//
+			{
 			cd_stock.put("ID", item_id);
 			cd_stock.put("name", name);
 			cd_stock.put("description", description);
@@ -250,7 +254,7 @@ do {
 			cd_stock3.put("quantity", quantity);
 			cd_stock3.put("price", price);
 			cd_stock3.put("category", category);
-			
+			}
 		if (stock_choice==2);
 		System.out.println("");
 		System.out.println("2: Create New Stock Entry");
