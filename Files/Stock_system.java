@@ -70,7 +70,7 @@ public class Stock_system {
 		String check_d = new String("D");
 		String check_e = new String("E");
 
-	System.out.println("1: Load Stock System");
+	
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
 	System.out.println("4: Delete Stock Details");
