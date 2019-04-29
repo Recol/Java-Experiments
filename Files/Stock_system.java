@@ -59,7 +59,7 @@ public class Stock_system {
 		
 		//option report checks for string comparisons
 		String check_h = new String("Hardware");
-		String check_s = new String("Hardware");
+		String check_s = new String("Software");
 		String check_b = new String("Books");
 		String check_cd = new String("CDs");
 		
