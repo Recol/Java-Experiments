@@ -911,20 +911,20 @@ System.out.println("Enter your choice:");
 		
 		
 		//parse string to int and add them all together//
-		 tbs += Integer.parseInt(total_book_stock);
-		 tss += Integer.parseInt(total_software_stock);
-		 tcd += Integer.parseInt(total_cd_stock);
-		 ths += Integer.parseInt(total_hardware_stock);
+		 tbs = Integer.parseInt(total_book_stock);
+		 tss = Integer.parseInt(total_software_stock);
+		 tcd = Integer.parseInt(total_cd_stock);
+		 ths = Integer.parseInt(total_hardware_stock);
 		 
 	
 
 		
 		//Initialise output via fetching stock quantities within Hashmaps//
 		System.out.println("Count Stock Quantity");
-		System.out.println("Books" + tbs);
-		System.out.println("CD/DVDs" + tcd);
-		System.out.println("Software: " + tcd);
-		System.out.println("Hardware " + ths);
+		System.out.println("Books" + book_stock.get("quantity"));
+		System.out.println("CD/DVDs" + cd_stock.get("quantity"));
+		System.out.println("Software: " + cd_stock.get("quantity"));
+		System.out.println("Hardware " + hardware_stock.get("quantity"));
 		
 	
 		
