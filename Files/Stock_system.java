@@ -63,6 +63,15 @@ public class Stock_system {
 		String check_b = new String("Books");
 		String check_cd = new String("CDs");
 		
+		
+		//adding hashmap check//
+		
+		int check_h1 = new Integer(1);
+		int check_s2 = new Integer(2);
+		int check_b3 = new Integer(3);
+		int check_cd4 = new Integer(4);
+		
+		
 		//option choice check comparisons//
 		String check_a = new String("A");
 		String checkb = new String("B");
@@ -132,6 +141,7 @@ do {
 			System.out.println("4: CD/DVDs");
 			System.out.println("");
 			category_o = category_input.nextInt();
+		
 			
 			System.out.println("");
 			System.out.println("Item Added: " + item_id);
@@ -143,9 +153,9 @@ do {
 			
 	//Hardware Storage//
 			
-			 if (category_o == 1) { //utilise hashmaps for storing entered stock/
+			 if (category_o == check_h1) { //utilise hashmaps for storing entered stock/
 			 
-			 hardware_stock.put("item_id", item_id);
+			hardware_stock.put("item_id", item_id);
 			hardware_stock.put("description", description);
 			hardware_stock.put("price", price);
 			hardware_stock.put("quantity", quantity);
@@ -173,7 +183,7 @@ do {
 			 }
 			
 			//Software Storage//
-	 else if (category_o == 2) { //utilise hashmaps for storing entered stock//
+	 else if (category_o == check_s2) { //utilise hashmaps for storing entered stock//
 		  
 			software_stock.put("item_id",item_id);
 			software_stock.put("name", name);
@@ -204,8 +214,8 @@ do {
 			
 			//Book storage//
 			
-			
-			else if (category_o == 3) { //utilise hashmaps for storing entered stock//
+			 
+			else if (category_o == check_b3) { //utilise hashmaps for storing entered stock//
 			
 			book_stock.put("ID", item_id);
 			book_stock.put("name", name);
@@ -234,7 +244,7 @@ do {
 			}
 			//CD storage//
 			
-			if (category_o == 4); { //utilise hashmaps for storing entered stock//
+			if (category_o == check_cd4); { //utilise hashmaps for storing entered stock//
 			
 			cd_stock.put("ID", item_id);
 			cd_stock.put("name", name);
