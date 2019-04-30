@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
-
 import java.util.HashMap;
 
 public class Stock_system {
