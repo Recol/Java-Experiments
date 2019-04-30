@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
+
 import java.util.HashMap;
 
 public class Stock_system {
@@ -49,10 +52,10 @@ public class Stock_system {
 		int new_ths = 0;
 		int new_tss = 0;
 		
-		int tbs = 0;
-		int tcd = 0;
-		int ths = 0;
-		int tss = 0;
+		Integer tbs = 0;
+		Integer tcd = 0;
+		Integer ths = 0;
+		Integer tss = 0;
 		
 		int total_sum = 0;
 		
@@ -891,38 +894,38 @@ System.out.println("Enter your choice:");
 		break;
 	case "5":
 		
-	
 		
-		//Initialise count via fetching stock quantities within Hashmaps//
-		System.out.println("Count Stock Quantity");
-		System.out.println("Books" + book_stock.get("quantity") + book_stock2.get("quantity") + book_stock3.get("quantity"));
-		System.out.println("CD/DVDs" + cd_stock.get("quantity") + cd_stock2.get("quantity") + cd_stock3.get("quantity"));
-		System.out.println("Software: " + software_stock.get("quantity") + software_stock2.get("quantity") + software_stock3.get("quantity"));
-		System.out.println("Hardware " + hardware_stock.get("quantity") + hardware_stock2.get("quantity") + hardware_stock3.get("quantity"));
+		//fetch total hashmap amount via identification of the relevant key//
 		
-		//load into single string variable for stock counting//
 		String total_book_stock = book_stock.get("quantity") + book_stock2.get("quantity") + book_stock3.get("quantity");
 		String total_software_stock = software_stock.get("quantity") + software_stock2.get("quantity") + software_stock3.get("quantity");
 		String total_cd_stock = cd_stock.get("quantity") + cd_stock2.get("quantity") + cd_stock3.get("quantity");
 		String total_hardware_stock = hardware_stock.get("quantity") + hardware_stock2.get("quantity") + hardware_stock3.get("quantity"); 
 		
 		
-		//Conversion to integers for processing integer operators//
+		//parse string to int and add them all together//
+		 tbs += Integer.parseInt(total_book_stock);
+		 tss += Integer.parseInt(total_software_stock);
+		 tcd += Integer.parseInt(total_cd_stock);
+		 ths += Integer.parseInt(total_hardware_stock);
+		 
+	
 
-		 tbs = Integer.parseInt(total_book_stock);
-		 tss = Integer.parseInt(total_software_stock);
-		 tcd = Integer.parseInt(total_cd_stock);
-		 ths = Integer.parseInt(total_hardware_stock);
 		
+		//Initialise output via fetching stock quantities within Hashmaps//
+		System.out.println("Count Stock Quantity");
+		System.out.println("Books" + tbs);
+		System.out.println("CD/DVDs" + tcd);
+		System.out.println("Software: " + tcd);
+		System.out.println("Hardware " + ths);
 		
-		int sum_total_stock = tbs + tss;
-		int sum_total_stock2 = tcd + ths;
-		 total_sum = sum_total_stock + sum_total_stock2;
+	
+		
+
+
+		
 //sum both amounts//
 		
-		//process as single//
-		
-		//Conversion to integers for processing integer operators//
 		
 		Scanner cs_5 = new Scanner(System.in);
 		System.out.println("1: Exit menu");
