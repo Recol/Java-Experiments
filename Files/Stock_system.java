@@ -153,7 +153,7 @@ do {
 			
 	//Hardware Storage//
 			
-			 if (category_o == check_h1) { //utilise hashmaps for storing entered stock/
+			 if (category_o == check_h1) //utilise hashmaps for storing entered stock/
 			 
 			hardware_stock.put("item_id", item_id);
 			hardware_stock.put("description", description);
@@ -163,7 +163,7 @@ do {
 			hardware_stock.put("name", name);
 			
 		
-			 } if(hardware_stock.containsKey("item_id")) {
+			  if(hardware_stock.containsKey("item_id")) 
 			hardware_stock2.put("item_id", item_id);
 			hardware_stock2.put("name", name);
 			hardware_stock2.put("description", description);
@@ -172,7 +172,7 @@ do {
 			hardware_stock2.put("category", category);
 			
 		
-			 } else if(hardware_stock2.containsKey("item_id")) {
+			   if(hardware_stock2.containsKey("item_id")) 
 			hardware_stock3.put("item_id", item_id);
 			hardware_stock3.put("name", name);
 			hardware_stock3.put("description", description);
@@ -180,10 +180,10 @@ do {
 			hardware_stock3.put("price", price);
 			hardware_stock3.put("category", category);
 			
-			 }
+			 
 			
 			//Software Storage//
-	 else if (category_o == check_s2) { //utilise hashmaps for storing entered stock//
+	  if (category_o == check_s2)  //utilise hashmaps for storing entered stock//
 		  
 			software_stock.put("item_id",item_id);
 			software_stock.put("name", name);
@@ -193,29 +193,29 @@ do {
 			software_stock.put("category", category);
 			
 			
-		   if(software_stock.containsKey("item_id")) {
+		   if(software_stock.containsKey("item_id")) 
 			software_stock2.put("item_id", item_id);
 			software_stock2.put("name", name);
 			software_stock2.put("description", description);
 			software_stock2.put("quantity", quantity);
 			software_stock2.put("price", price);
-			software_stock2.put("category", category); }
+			software_stock2.put("category", category); 
 			
 		
-	 } else if(software_stock2.containsKey("item_id")) {
+	   if(software_stock2.containsKey("item_id")) 
 			software_stock3.put("item_id", item_id);
 			software_stock3.put("name", name);
 			software_stock3.put("description", description);
 			software_stock3.put("quantity", quantity);
 			software_stock3.put("price", price);
 			software_stock3.put("category", category); 
-		  }
+		  
 		
 			
 			//Book storage//
 			
 			 
-			else if (category_o == check_b3) { //utilise hashmaps for storing entered stock//
+			 if (category_o == check_b3)  //utilise hashmaps for storing entered stock//
 			
 			book_stock.put("ID", item_id);
 			book_stock.put("name", name);
@@ -223,28 +223,28 @@ do {
 			book_stock.put("quantity", quantity);
 			book_stock.put("price", price);
 			book_stock.put("category", category);
-			}
 			
-			if(book_stock.containsKey("ID")) {
+			
+			if(book_stock.containsKey("ID")) 
 			book_stock2.put("ID", item_id);
 			book_stock2.put("name", name);
 			book_stock2.put("description", description);
 			book_stock2.put("quantity", quantity);
 			book_stock2.put("price", price);
-			book_stock2.put("category", category); }
+			book_stock2.put("category", category); 
 			
 		
-	else if(book_stock2.containsKey("ID")); {
+	 if(book_stock2.containsKey("ID")); 
 			book_stock3.put("ID", item_id);
 			book_stock3.put("name", name);
 			book_stock3.put("description", description);
 			book_stock3.put("quantity", quantity);
 			book_stock3.put("price", price);
 			book_stock3.put("category", category);
-			}
+			
 			//CD storage//
 			
-			if (category_o == check_cd4); { //utilise hashmaps for storing entered stock//
+			if (category_o == check_cd4);  //utilise hashmaps for storing entered stock//
 			
 			cd_stock.put("ID", item_id);
 			cd_stock.put("name", name);
@@ -252,24 +252,24 @@ do {
 			cd_stock.put("quantity", quantity);
 			cd_stock.put("price", price);
 			cd_stock.put("category", category);
-			}
-			if(cd_stock.containsKey("ID")); {
+			
+			if(cd_stock.containsKey("ID")); 
 			cd_stock2.put("ID", item_id);
 			cd_stock2.put("name", name);
 			cd_stock2.put("description", description);
 			cd_stock2.put("quantity", quantity);
 			cd_stock2.put("price", price);
 			cd_stock2.put("category", category);
-			}
 			
-			if(cd_stock2.containsKey("ID")); {
+			
+			if(cd_stock2.containsKey("ID")); 
 			cd_stock3.put("ID", item_id);
 			cd_stock3.put("name", name);
 			cd_stock3.put("description", description);
 			cd_stock3.put("quantity", quantity);
 			cd_stock3.put("price", price);
 			cd_stock3.put("category", category);
-			}
+			
 		
 			if (stock_choice==2); 
 		System.out.println("");
@@ -1330,8 +1330,8 @@ System.out.println("Enter your choice:");
 		System.exit(0);
 		input.close();
 		break;
-	}
-	 }while (!option.equals("8"));
+	
+	}}while (!option.equals("8"));
 	
 	
 }}
