@@ -986,7 +986,7 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths);
 	
 	Scanner echeck = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
+	System.out.println("Press 'E' to see the next report.");
 	String echeck_a = echeck.next();
 
 	if (echeck_a == check_e)
@@ -1013,7 +1013,7 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*6/2);
 	
 	Scanner echeck_b = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
+	System.out.println("Press 'E' to see the next report.");
 	String echeckb = echeck_b.next();
 	if (echeckb == check_e)
 	{
@@ -1038,7 +1038,7 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_c = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
+	System.out.println("Press 'E' to see the next report.");
 	String echeckc = echeck_c.next();
 	if (echeckc == check_e)
 	{
@@ -1062,7 +1062,7 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_d = new Scanner(System.in);
-	System.out.println("Press 'E' to return to the prior menu");
+	System.out.println("Press 'E' to return to the prior menu.");
 	String echeckd = echeck_d.next();
 	if (echeckd == check_e)
 	{
@@ -1139,7 +1139,7 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	Scanner echeck_3 = new Scanner(System.in); 
-	System.out.println("Press 'E' to exit out of this report.");
+	System.out.println("Press 'E' to see the next report.");
 	String echeck_33 = echeck_3.next(); 
 	if (echeck_33 == check_e) //stop the script if E is checked//
 	{
@@ -1202,7 +1202,7 @@ System.out.println("Enter your choice:");
 	
 	
 	Scanner echeck_2 = new Scanner(System.in);
-	System.out.println("Press 'E' to exit out of this report.");
+	System.out.println("Press 'E' to see the next report.");
 	String echeck_22 = echeck_2.next();
 	if (echeck_22 == check_e)
 	{
@@ -1263,7 +1263,7 @@ System.out.println("Enter your choice:");
 	
 	
 	Scanner echeck_4 = new Scanner(System.in);
-	System.out.println("Press 'E' to exit out of this report.");
+	System.out.println("Press 'E' to see the next report.");
 	String echeck_44 = echeck_4.next();
 	if (echeck_44 == check_e)
 	{
@@ -1323,7 +1323,7 @@ System.out.println("Enter your choice:");
 	
 	
 	Scanner echeck_5 = new Scanner(System.in);
-	System.out.println("Press 'E' to exit out of this report.");
+	System.out.println("Press 'E' to see the next report.");
 	String echeck_55 = echeck_5.next();
 	if (echeck_55 == check_e)
 	{
