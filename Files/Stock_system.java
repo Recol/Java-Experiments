@@ -986,9 +986,13 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths);
 	
 	Scanner echeck = new Scanner(System.in);
-	System.out.println("Press '5' to return to the prior menu");
-	int echeck_a = echeck.nextInt();
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeck_a = echeck.next();
 
+	if (echeck_a == check_e)
+	{
+	break;
+	}
  
 
 	//if choose b//
@@ -1009,9 +1013,12 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*6/2);
 	
 	Scanner echeck_b = new Scanner(System.in);
-	System.out.println("Press '5' to return to the prior menu");
-	int echeckb = echeck_b.nextInt();
-	
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckb = echeck_b.next();
+	if (echeckb == check_e)
+	{
+		break;
+	}
 	
 	if (ad_choice_1 == 3);
 	
@@ -1031,9 +1038,12 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_c = new Scanner(System.in);
-	System.out.println("Press '5' to return to the prior menu");
-	int echeckc = echeck_c.nextInt();
-	
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckc = echeck_c.next();
+	if (echeckc == check_e)
+	{
+		break;
+	}
 	//1 year//
 	if (ad_choice_1 == 4);
 	System.out.println("Stock Sales Report (1 Year)");
@@ -1052,15 +1062,13 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: " + ths*8/2);
 	
 	Scanner echeck_d = new Scanner(System.in);
-	System.out.println("Press '5' to return to the prior menu");
-	int echeckd = echeck_d.nextInt();
-	
+	System.out.println("Press 'E' to return to the prior menu");
+	String echeckd = echeck_d.next();
+	if (echeckd == check_e)
+	{
+		break;
+	}
 	//break if E is selected//
-	if (ad_choice_1 == 5);
-	if (echeckd == 5);
-	if (echeckc == 5);
-	if (echeck_a == 5);
-	if (echeckb == 5);
 	
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
@@ -1108,7 +1116,7 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	System.out.println("Books: " + tbs);
-	System.out.println("CD/DVDs" + tcd);
+	System.out.println("CD/DVDs: " + tcd);
 	System.out.println("Software: " + tss);
 	System.out.println("Hardware: " + ths);
 	
@@ -1116,10 +1124,10 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	//renewal trigger
-	System.out.println("Books" + automatic_renewal_book);
-	System.out.println("CD/DVDs" + automatic_renewal_cds);
-	System.out.println("Software" + automatic_renewal_software);
-	System.out.println("Hardware" + automatic_renewal_hardware);
+	System.out.println("Books: " + automatic_renewal_book);
+	System.out.println("CD/DVDs: " + automatic_renewal_cds);
+	System.out.println("Software: " + automatic_renewal_software);
+	System.out.println("Hardware: " + automatic_renewal_hardware);
 	
 	System.out.println("");
 	System.out.println("Total Stock Adjustments:");
@@ -1130,10 +1138,13 @@ System.out.println("Enter your choice:");
 	System.out.println("Hardware: 0");
 	System.out.println("");
 	
-	Scanner echeck_3 = new Scanner(System.in);
+	Scanner echeck_3 = new Scanner(System.in); 
 	System.out.println("Press 'E' to exit out of this report.");
-	String echeck_33 = echeck_3.next();
-	
+	String echeck_33 = echeck_3.next(); 
+	if (echeck_33 == check_e) //stop the script if E is checked//
+	{
+		break;
+	}
 	
 	
 	
@@ -1193,6 +1204,10 @@ System.out.println("Enter your choice:");
 	Scanner echeck_2 = new Scanner(System.in);
 	System.out.println("Press 'E' to exit out of this report.");
 	String echeck_22 = echeck_2.next();
+	if (echeck_22 == check_e)
+	{
+		break;
+	}
 
 	//6 months//
 	
@@ -1223,7 +1238,7 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	System.out.println("Books: " + new_tbs);
-	System.out.println("CD/DVDs" + new_tcd);
+	System.out.println("CD/DVDs: " + new_tcd);
 	System.out.println("Software: " + new_tss);
 	System.out.println("Hardware: " + new_ths);
 	
@@ -1231,10 +1246,10 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	//renewal trigger
-	System.out.println("Books" + automatic_renewal_book);
-	System.out.println("CD/DVDs" + automatic_renewal_cds);
-	System.out.println("Software" + automatic_renewal_software);
-	System.out.println("Hardware" + automatic_renewal_hardware);
+	System.out.println("Books: " + automatic_renewal_book);
+	System.out.println("CD/DVDs: " + automatic_renewal_cds);
+	System.out.println("Software: " + automatic_renewal_software);
+	System.out.println("Hardware: " + automatic_renewal_hardware);
 	
 	System.out.println("");
 	System.out.println("Total Stock Adjustments:");
@@ -1250,7 +1265,10 @@ System.out.println("Enter your choice:");
 	Scanner echeck_4 = new Scanner(System.in);
 	System.out.println("Press 'E' to exit out of this report.");
 	String echeck_44 = echeck_4.next();
-	
+	if (echeck_44 == check_e)
+	{
+		break;
+	}
 	//1 Year//
 	
 	if (ad_choice_2 == 4);
@@ -1288,10 +1306,10 @@ System.out.println("Enter your choice:");
 	System.out.println("");
 	
 	//renewal trigger
-	System.out.println("Books" + automatic_renewal_book);
-	System.out.println("CD/DVDs" + automatic_renewal_cds);
-	System.out.println("Software" + automatic_renewal_software);
-	System.out.println("Hardware" + automatic_renewal_hardware);
+	System.out.println("Books: " + automatic_renewal_book);
+	System.out.println("CD/DVDs: " + automatic_renewal_cds);
+	System.out.println("Software: " + automatic_renewal_software);
+	System.out.println("Hardware: " + automatic_renewal_hardware);
 	
 	System.out.println("");
 	System.out.println("Total Stock Adjustments:");
@@ -1307,13 +1325,11 @@ System.out.println("Enter your choice:");
 	Scanner echeck_5 = new Scanner(System.in);
 	System.out.println("Press 'E' to exit out of this report.");
 	String echeck_55 = echeck_5.next();
+	if (echeck_55 == check_e)
+	{
+		break;
+	}
 	
-	
-	if (echeck_44.equals(check_e));
-	if (echeck_22.equals(check_e));
-	if (echeck_33.equals(check_e));
-	if (echeck_55.equals(check_e));
-	if (ad_choice_2 == 5);
 	
 	System.out.println("2: Create New Stock Entry");
 	System.out.println("3: Amend Stock Details");
