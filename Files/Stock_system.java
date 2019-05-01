@@ -165,23 +165,23 @@ do {
 			hardware_stock.put("name", name);
 			 
 		
-			  if(hardware_stock.containsKey("item_id")) {
+			  if(hardware_stock.containsKey("item_id")) 
 			hardware_stock2.put("item_id", item_id);
 			hardware_stock2.put("name", name);
 			hardware_stock2.put("description", description);
 			hardware_stock2.put("quantity", quantity);
 			hardware_stock2.put("price", price);
 			hardware_stock2.put("category", category);
-			  }
-		
-			   if(hardware_stock2.containsKey("item_id")) {
+			  
+	
+			   if(hardware_stock2.containsKey("item_id")) 
 			hardware_stock3.put("item_id", item_id);
 			hardware_stock3.put("name", name);
 			hardware_stock3.put("description", description);
 			hardware_stock3.put("quantity", quantity);
 			hardware_stock3.put("price", price);
 			hardware_stock3.put("category", category);
-			   }
+			   
 			 }
 			
 			//Software Storage//
@@ -195,7 +195,7 @@ do {
 			software_stock.put("category", category);
 			
 			
-		   if(software_stock.containsKey("item_id")) {
+		   if(software_stock.containsKey("item_id")) 
 			software_stock2.put("item_id", item_id);
 			software_stock2.put("name", name);
 			software_stock2.put("description", description);
@@ -203,9 +203,9 @@ do {
 			software_stock2.put("price", price);
 			software_stock2.put("category", category); 
 			
-		   }
 		   
-	   if(software_stock2.containsKey("item_id")) {
+		   
+	   if(software_stock2.containsKey("item_id")) 
 			software_stock3.put("item_id", item_id);
 			software_stock3.put("name", name);
 			software_stock3.put("description", description);
@@ -213,7 +213,7 @@ do {
 			software_stock3.put("price", price);
 			software_stock3.put("category", category); 
 		  
-	  }}
+	  }
 			
 			//Book storage//
 			
@@ -228,7 +228,7 @@ do {
 			book_stock.put("category", category);
 			
 			
-			if(book_stock.containsKey("ID"))  {
+			if(book_stock.containsKey("ID"))  
 			book_stock2.put("ID", item_id);
 			book_stock2.put("name", name);
 			book_stock2.put("description", description);
@@ -237,17 +237,17 @@ do {
 			book_stock2.put("category", category); 
 			}
 		
-	 if(book_stock2.containsKey("ID")); {
+	 if(book_stock2.containsKey("ID")); 
 			book_stock3.put("ID", item_id);
 			book_stock3.put("name", name);
 			book_stock3.put("description", description);
 			book_stock3.put("quantity", quantity);
 			book_stock3.put("price", price);
 			book_stock3.put("category", category);
-	 }}
+	 
 			//CD storage//
 			
-			if (category_o == check_cd4); {  //utilise hashmaps for storing entered stock//
+			if (category_o == check_cd4);  //utilise hashmaps for storing entered stock//
 			
 			cd_stock.put("ID", item_id);
 			cd_stock.put("name", name);
@@ -272,7 +272,7 @@ do {
 			cd_stock3.put("quantity", quantity);
 			cd_stock3.put("price", price);
 			cd_stock3.put("category", category);
-			}}
+			}
 		
 			if (stock_choice==2); 
 		System.out.println("");
@@ -974,16 +974,16 @@ System.out.println("Enter your choice:");
 	//line separators//
 	System.out.println("");
 	
-	System.out.println("Total Quantity Sold: " + total_sum*2);
+	System.out.println("Total Quantity Sold: " + total_sum);
 	System.out.println("");
 	
 	System.out.println("Types Sold");
 	System.out.println("");
 	
 	System.out.println("Books: " + tbs);
-	System.out.println("CD/DVDs" + tcd*2);
-	System.out.println("Software: " + tss*2);
-	System.out.println("Hardware: " + ths*2);
+	System.out.println("CD/DVDs" + tcd);
+	System.out.println("Software: " + tss);
+	System.out.println("Hardware: " + ths);
 	
 	Scanner echeck = new Scanner(System.in);
 	System.out.println("Press '5' to return to the prior menu");
@@ -1003,10 +1003,10 @@ System.out.println("Enter your choice:");
 	System.out.println("Types Sold");
 	System.out.println("");
 	
-	System.out.println("Books: " + tbs*12/2);
-	System.out.println("CD/DVDs" + tcd*12/2);
-	System.out.println("Software: " + tss*12/2);
-	System.out.println("Hardware: " + ths*12/2);
+	System.out.println("Books: " + tbs*2);
+	System.out.println("CD/DVDs" + tcd*4/2);
+	System.out.println("Software: " + tss*4);
+	System.out.println("Hardware: " + ths*6/2);
 	
 	Scanner echeck_b = new Scanner(System.in);
 	System.out.println("Press '5' to return to the prior menu");
@@ -1016,6 +1016,27 @@ System.out.println("Enter your choice:");
 	if (ad_choice_1 == 3);
 	
 	System.out.println("Stock Sales Report (6 Months)");
+	//line separators//
+	System.out.println("");
+	
+	System.out.println("Total Quantity Sold: " + total_sum*8/4);
+	System.out.println("");
+	
+	System.out.println("Types Sold");
+	System.out.println("");
+	
+	System.out.println("Books: " + tbs*6/4);
+	System.out.println("CD/DVDs" + tcd*6/4);
+	System.out.println("Software: " + tss*6/4);
+	System.out.println("Hardware: " + ths*8/2);
+	
+	Scanner echeck_c = new Scanner(System.in);
+	System.out.println("Press '5' to return to the prior menu");
+	int echeckc = echeck_c.nextInt();
+	
+	//1 year//
+	if (ad_choice_1 == 4);
+	System.out.println("Stock Sales Report (1 Year)");
 	//line separators//
 	System.out.println("");
 	
@@ -1029,27 +1050,6 @@ System.out.println("Enter your choice:");
 	System.out.println("CD/DVDs" + tcd*8/2);
 	System.out.println("Software: " + tss*8/2);
 	System.out.println("Hardware: " + ths*8/2);
-	
-	Scanner echeck_c = new Scanner(System.in);
-	System.out.println("Press '5' to return to the prior menu");
-	int echeckc = echeck_c.nextInt();
-	
-	//1 year//
-	if (ad_choice_1 == 4);
-	System.out.println("Stock Sales Report (1 Year)");
-	//line separators//
-	System.out.println("");
-	
-	System.out.println("Total Quantity Sold: " + total_sum*12/2);
-	System.out.println("");
-	
-	System.out.println("Types Sold");
-	System.out.println("");
-	
-	System.out.println("Books: " + tbs*12/2);
-	System.out.println("CD/DVDs" + tcd*12/2);
-	System.out.println("Software: " + tss*12/2);
-	System.out.println("Hardware: " + ths*12/2);
 	
 	Scanner echeck_d = new Scanner(System.in);
 	System.out.println("Press '5' to return to the prior menu");
