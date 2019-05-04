@@ -1323,7 +1323,7 @@ System.out.println("Enter your choice:");
 	
 	
 	Scanner echeck_5 = new Scanner(System.in);
-	System.out.println("Press 'E' to see the next report.");
+	System.out.println("Press 'E' to return to the prior menu.");
 	String echeck_55 = echeck_5.next();
 	if (echeck_55 == check_e)
 	{
