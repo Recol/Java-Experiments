@@ -1350,8 +1350,10 @@ System.out.println("Enter your choice:");
 		input.close();
 		break;
 	
-	}}while (!option.equals("8"));
+	}
+}while (!option.equals("8"));
 	
 	
-}}
+}
+}
 
