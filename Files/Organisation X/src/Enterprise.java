@@ -85,19 +85,23 @@ public class Enterprise {
 					Marketing.department_data();
 					System.out.println("Please choose 1 or 2");
 					department_choice = input.nextInt();
+					do	 
+					{
+							System.out.println("That is not a valid menu input, please try again");
+							department_choice = input.nextInt();
+							
+							if (department_choice.intValue() == 1 || department_choice.intValue() == 2) {
+							
+							break;
+							}
+						}while (department_choice != 1 || department_choice != 2);
+			System.out.println("");
 					if (department_choice == 1)
 						dep_choice1 = true;
 					else 
 						if (department_choice == 2)
 							dep_choice1 = false;
-						else
-					if (department_choice.intValue() != department_verification) //use numerical menu comparisons
-					{
-						System.out.println("That is not a valid menu input, please try again");
-						break;
-					}
-					System.out.println("");
-					
+						
 					Scanner employee2_entry = new Scanner(System.in);
 					//use second scanner to prevent passive code execution
 					System.out.println("What is the name of the second employee you would like to add?");
@@ -110,19 +114,24 @@ public class Enterprise {
 					System.out.println("Please choose 1 or 2");
 					department_choice2 = employee2_entry.nextInt();
 					
+					do	 
+					{
+							System.out.println("That is not a valid menu input, please try again");
+							department_choice2 = employee2_entry.nextInt();
+							
+							if (department_choice2.intValue() == 1 || department_choice2.intValue() == 2) {
+							
+							break;
+							}
+						}while (department_choice2 != 1 || department_choice2 != 2);
 					if (department_choice2 == 1)
 						dep_choice2 = true;
 					else 
 						if (department_choice2 == 2)
 							dep_choice2 = false;
-						else
-							if (department_choice2.intValue() != department_verification) //use numerical menu comparisons
-								 {
-									System.out.println("That is not a valid menu input, please try again");
-									break;
-								}
-								
-					
+						
+							 //use numerical menu comparisons
+						
 					System.out.println("1: List All Departments (all available departments)");
 					System.out.println("2: List All Employees (all employees by name and departments)");
 					System.out.println("3: Add Employees (add a new employee by name to a department)");
