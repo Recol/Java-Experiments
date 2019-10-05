@@ -87,15 +87,17 @@ public class Enterprise {
 					department_choice = input.next();
 					do	 
 					{
-							System.out.println("That is not a valid menu input, please try again");
-							department_choice = input.next();
+							
 							
 							if (department_choice.equals("1") || department_choice.equals("2")) {
 							
 							break;
 							}
-						}while (!department_choice.equals("1") || !department_choice.equals("2"));
-			System.out.println("");
+							System.out.println("That is not a valid menu input, please try again");
+							department_choice = input.next();
+					}while (!department_choice.equals("1") || !department_choice.equals("2"));
+			
+					System.out.println("");
 					if (department_choice.equals("1"))
 						dep_choice1 = true;
 					else 
@@ -117,14 +119,16 @@ public class Enterprise {
 					department_choice2 = input.next();
 					do	 
 					{
-							System.out.println("That is not a valid menu input, please try again");
-							department_choice2 = input.next();
+							
 							
 							if (department_choice2.equals("1") || department_choice2.equals("2")) {
 							
 							break;
 							}
-						}while (!department_choice2.equals("1") || !department_choice2.equals("2"));
+							System.out.println("That is not a valid menu input, please try again");
+							department_choice2 = input.next();
+							
+					}while (!department_choice2.equals("1") || !department_choice2.equals("2"));
 					if (department_choice2.equals("1"))
 						dep_choice2 = true;
 					else 
