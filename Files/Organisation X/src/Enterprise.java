@@ -14,10 +14,11 @@ public class Enterprise {
 		boolean dep_choice1 = true; //use boolean for detecting particular departments
 		boolean dep_choice2 = true; //use second boolean for second department
 		
-		
+			
 			Department Sales = new Department(); //initialise both objects
 			Department Marketing = new Department(); 
 			Employee employee = new Employee();
+			Person people = new Person();
 			
 			System.out.println("1: List All Departments (all available departments)");
 			System.out.println("2: List All Employees (all employees by name and departments)");
@@ -55,16 +56,16 @@ public class Enterprise {
 					
 					//use department choices to identify employee outputs
 					if (dep_choice1 = true)
-						System.out.println("The first employee "+ employee.employee1 +" belongs to the department "+Sales.department_sales);
+						System.out.println("The first employee "+ employee.employee1 +"is "+employee.gender1+"and is the age of"+employee.age_1 +" belongs to the department "+Sales.department_sales); //output sales department details
 					else
 						if (dep_choice1 = false)
-							System.out.println("The first employee "+ employee.employee1 +" belongs to the department "+Marketing.department_marketing);
+							System.out.println("The first employee "+ employee.employee1 + "is "+employee.gender1+"and is the age of"+employee.age_1+" belongs to the department "+Marketing.department_marketing);
 					
 					if (dep_choice2 = true)
-						System.out.println("The second employee "+ employee.employee2 +" belongs to the department "+Sales.department_sales);
+						System.out.println("The second employee "+ employee.employee2 + "is "+employee.gender2+"and is the age of"+employee.age_2+" belongs to the department "+Sales.department_sales);
 					else 
 						if (dep_choice2 = false)
-							System.out.println("The second employee "+ employee.employee2 +" belongs to the department "+Marketing.department_marketing);
+							System.out.println("The second employee "+ employee.employee2 + "is "+employee.gender2+"and is the age of"+employee.age_2+" belongs to the department "+Marketing.department_marketing);
 					System.out.println("");
 					
 					System.out.println("1: List All Departments (all available departments)");
@@ -75,9 +76,9 @@ public class Enterprise {
 					System.out.println("Please input your menu choice");
 					break;
 				case "3":
-					System.out.println("What is the name of the first employee you would like to add?");
-					employee1 = input.nextLine();
-					employee.set_employee1(employee1); //set object to employee
+					people.name_check();
+					people.age_check();
+					people.gender_check(); //load 3 objects referencing name, age and the gender for the first employee
 					System.out.println("");
 					
 					//split department choice//
@@ -103,12 +104,14 @@ public class Enterprise {
 					else 
 						if (department_choice.equals("2"))
 							dep_choice1 = false;
-						
+						//first employee//
 					Scanner employee2_entry = new Scanner(System.in);
 					//use second scanner to prevent passive code execution
-					System.out.println("What is the name of the second employee you would like to add?");
-					employee2 = employee2_entry.nextLine();
-					employee.set_employee2(employee2); //set to object
+					people.name_check();
+					people.age_check();
+					people.gender_check();
+					//begin second person reference//
+					
 					System.out.println("");
 					
 					System.out.println("Which department do they belong to?");
