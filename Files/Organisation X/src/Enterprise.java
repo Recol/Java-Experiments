@@ -8,8 +8,8 @@ public class Enterprise {
 		String employee2 = "";
 		String option = "";
 		
-		Integer department_choice = 0;
-		Integer department_choice2 = 0;
+		String department_choice = "";
+		String department_choice2 = "";
 		Integer department_verification = 1-2;
 		boolean dep_choice1 = true; //use boolean for detecting particular departments
 		boolean dep_choice2 = true; //use second boolean for second department
@@ -84,22 +84,22 @@ public class Enterprise {
 					System.out.println("Which department do they belong to?");
 					Marketing.department_data();
 					System.out.println("Please choose 1 or 2");
-					department_choice = input.nextInt();
+					department_choice = input.next();
 					do	 
 					{
 							System.out.println("That is not a valid menu input, please try again");
-							department_choice = input.nextInt();
+							department_choice = input.next();
 							
-							if (department_choice.intValue() == 1 || department_choice.intValue() == 2) {
+							if (department_choice.equals("1") || department_choice.equals("2")) {
 							
 							break;
 							}
-						}while (department_choice != 1 || department_choice != 2);
+						}while (!department_choice.equals("1") || !department_choice.equals("2"));
 			System.out.println("");
-					if (department_choice == 1)
+					if (department_choice.equals("1"))
 						dep_choice1 = true;
 					else 
-						if (department_choice == 2)
+						if (department_choice.equals("2"))
 							dep_choice1 = false;
 						
 					Scanner employee2_entry = new Scanner(System.in);
@@ -112,22 +112,23 @@ public class Enterprise {
 					System.out.println("Which department do they belong to?");
 					Marketing.department_data();
 					System.out.println("Please choose 1 or 2");
-					department_choice2 = employee2_entry.nextInt();
+					department_choice2 = employee2_entry.next();
 					
+					department_choice2 = input.next();
 					do	 
 					{
 							System.out.println("That is not a valid menu input, please try again");
-							department_choice2 = employee2_entry.nextInt();
+							department_choice2 = input.next();
 							
-							if (department_choice2.intValue() == 1 || department_choice2.intValue() == 2) {
+							if (department_choice2.equals("1") || department_choice2.equals("2")) {
 							
 							break;
 							}
-						}while (department_choice2 != 1 || department_choice2 != 2);
-					if (department_choice2 == 1)
+						}while (!department_choice2.equals("1") || !department_choice2.equals("2"));
+					if (department_choice2.equals("1"))
 						dep_choice2 = true;
 					else 
-						if (department_choice2 == 2)
+						if (department_choice2 == ("2"))
 							dep_choice2 = false;
 						
 							 //use numerical menu comparisons
