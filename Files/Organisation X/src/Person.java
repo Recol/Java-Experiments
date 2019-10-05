@@ -40,8 +40,8 @@ public class Person {
 			String employee1 = "";
 			Scanner input = new Scanner(System.in);
 			System.out.println("What is the name of the employee you would like to add?");
-			employee1 = input.nextLine();
-			input.close();
+			employee1 = input.next();
+			
 			return employee1;
 			
 		}
@@ -52,7 +52,7 @@ public class Person {
 			Scanner age_check = new Scanner(System.in);
 			System.out.println("What is the age of the employee?");
 			age = age_check.nextInt();
-			age_check.close();
+			
 			return age;
 		}
 

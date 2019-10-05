@@ -119,7 +119,7 @@ public class Enterprise {
 					System.out.println("Please choose 1 or 2");
 					department_choice2 = employee2_entry.next();
 					
-					department_choice2 = input.next();
+					
 					do	 
 					{
 							

@@ -1,12 +1,12 @@
 
 public class Employee extends Person {
-	 String employee1 = "";
-	 String employee2 = "";
-	 int age_1 = 0;
-	 int age_2 = 0;
+	 public String employee1 = "";
+	 public String employee2 = "";
+	 public int age_1 = 0;
+	public int age_2 = 0;
 	 
-	 String gender1 = "";
-	 String gender2 = "";
+	 public String gender1 = "";
+	 public String gender2 = "";
 	
 	
 	public Employee() {}
