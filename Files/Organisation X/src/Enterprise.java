@@ -56,17 +56,18 @@ public class Enterprise {
 					
 					//use department choices to identify employee outputs
 					if (dep_choice1 = true)
-						System.out.println("The first employee "+ employee.employee1 +"is "+employee.gender1+"and is the age of"+employee.age_1 +" belongs to the department "+Sales.department_sales); //output sales department details
+						employee.output_1(); //output sales department details
+		
 					else
 						if (dep_choice1 = false)
-							System.out.println("The first employee "+ employee.employee1 + "is "+employee.gender1+"and is the age of"+employee.age_1+" belongs to the department "+Marketing.department_marketing);
+							employee.output_2();
 					
 					if (dep_choice2 = true)
-						System.out.println("The second employee "+ employee.employee2 + "is "+employee.gender2+"and is the age of"+employee.age_2+" belongs to the department "+Sales.department_sales);
+							employee.output_3();
 					else 
 						if (dep_choice2 = false)
-							System.out.println("The second employee "+ employee.employee2 + "is "+employee.gender2+"and is the age of"+employee.age_2+" belongs to the department "+Marketing.department_marketing);
-					System.out.println("");
+							employee.output_4();
+							System.out.println("");
 					
 					System.out.println("1: List All Departments (all available departments)");
 					System.out.println("2: List All Employees (all employees by name and departments)");
