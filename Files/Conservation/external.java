@@ -8,7 +8,7 @@ import java.util.*;
 
 public class external { /*this will display information to the main class in order to
 						override problems of static methods*/
-	
+	boolean change_data = false; //used to morph to different data structures
 	String filepath = "";
 	
 	public void menu_display() {
@@ -61,8 +61,10 @@ public class external { /*this will display information to the main class in ord
 		objReader = new BufferedReader(new FileReader(filepath));
 		
 		while ((currentline = objReader.readLine()) != null) {
-			System.out.println("currentline");
-		}
+			if (currentline.contentEquals(",")) {
+				change_data = true;
+			}
+		
 		if (filepath.contains("Cages")) {
 			Cages cages = new Cages();
 			cages.begin(); /*call method loader based on text file*/
@@ -83,6 +85,7 @@ public class external { /*this will display information to the main class in ord
 			System.out.println("No file has been located.");
 			System.out.println("Please re-run the program again, ensuring that you have defined the correct filepath location.");
 			System.exit(0);
+		}
 		}
 		}catch (IOException e) {
 			e.printStackTrace();

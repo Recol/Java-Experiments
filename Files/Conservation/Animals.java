@@ -1,7 +1,11 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Animals {
 	public Animals () {}
@@ -9,21 +13,27 @@ public class Animals {
 	public void file_external_location() {
 		String file_location = "";
 		external object = new external();
-		 external_location = object.filepath; /*load in the directory file declared before into a string*/
+		 this.external_location = object.filepath; /*load in the directory file declared before into a string*/
 	}
 	public void begin() throws IOException {
-		file_external_location(); /* so call in order to process the string for loading into a data structure*/
-	try {
-		
-	
-	List<String> lines = Files.readAllLines(Paths.get(external_location)); /*load the file into the list*/
+		 /* so call in order to process the string for loading into a data structure*/
+	file_external_location();
+	Scanner s = new Scanner(new File(external_location));
+	ArrayList<String> list = new ArrayList<String>();
+	while (s.hasNext()){
+	    list.add(s.next());
 	}
-	catch (IOException e) {
-	e.getStackTrace();	
+	s.close();
+	
+	for (int i= 0; i <list.size(); i++) {
+		System.out.println(list.toString());
+	}
 	}}
 	
 	
+	
+	
 
 
-	}
+	
 

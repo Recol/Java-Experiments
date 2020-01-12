@@ -21,9 +21,11 @@ public class Main {
 			switch (menu) {
 			case "1":
 				external_object.filereader();
+				external_object.menu_display();
 				break;
 				
 			case "2":
+				
 				break;
 			case "3":
 		break;
