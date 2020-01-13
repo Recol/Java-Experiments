@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -7,7 +8,7 @@ import java.util.*;
 
 public class external { /*this will display information to the main class in order to
 						override problems of static methods*/
-	
+	boolean change_data = false; //used to morph to different data structures
 	String filepath = "";
 	
 	public void menu_display() {
@@ -31,6 +32,11 @@ public class external { /*this will display information to the main class in ord
 	}
 	
 	public void filereader() { /*allow for custom defining the file location*/
+		Set<String> match_conditions = new HashSet<String>(); /*this delimator will be used for cross regex checks with the filepath for a string name*/
+		match_conditions.add("Keepers");
+		match_conditions.add("Cages");
+		match_conditions.add("Enclosures");
+		match_conditions.add("Animals");
 		
 		System.out.println("Please define the location of where the file is");
 		Scanner file_location = new Scanner(System.in);
@@ -55,9 +61,29 @@ public class external { /*this will display information to the main class in ord
 		objReader = new BufferedReader(new FileReader(filepath));
 		
 		while ((currentline = objReader.readLine()) != null) {
-			System.out.println("currentline");
+			if (currentline.contentEquals(",")) {
+				change_data = true;
+			System.out.println(currentline);
+			}
+		
+		if (filepath.contains("Cages.txt")) {
+			Cages cages = new Cages();
+			cages.begin(); /*call method loader based on text file*/
+		}
+		if (filepath.contains("Animals.txt")) { /*decide what object to load depending on what file is loaded*/
+			Animals animals = new Animals();
+			animals.begin();
+		}
+		if (filepath.contains("Keepers.txt")) {
+			Keepers keepers = new Keepers();
+			keepers.begin();
+		}
+		if (filepath.contains("Enclosures.txt")) {
+			Enclosures enclosures = new Enclosures();
+			enclosures.begin();
 		}
 		
+		}
 		}catch (IOException e) {
 			e.printStackTrace();
 			
