@@ -10,6 +10,7 @@ public class Keepers {
 	private String first_Name;
 	private String last_Name;
 	private ArrayList<String> cage_Assignment;
+	private String keeper_ID;
 	
 	external external_object = new external();
 	
@@ -37,6 +38,8 @@ public class Keepers {
 	
 	public Keepers newKeepers(Keepers keeper) {
 		keeper_details();
+		
+		return keeper;
 	}
 	
 	
@@ -54,7 +57,7 @@ public class Keepers {
 	
 	
 	
-	 */
+	
 	public String get_Keeper_ID() {
 		return keeper_ID;
 	}

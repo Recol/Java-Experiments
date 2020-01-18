@@ -1,10 +1,4 @@
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -19,10 +13,11 @@ public class Animals {
 	private String cage_Assignment;
 	external object = new external();
 	
+	
 	public Animals () {}
 	String external_location = "";
 	public void file_external_location() {
-		String file_location = "";
+		
 		
 		 this.external_location = object.filepath; /*load in the directory file declared before into a string*/
 	}
@@ -212,6 +207,53 @@ public class Animals {
 		}
 	}
 	
+		public void edit_Animal_Details(Animals animal) {
+			boolean begin = true;
+			
+			do {
+				try {
+				if (animal != null) {
+				Scanner input = new Scanner(System.in);
+					System.out.println("Please select an option");	
+				System.out.println("");
+				System.out.println("1: Edit Animal sex");
+				System.out.println("2: Edit animal name");
+				System.out.println("3: Exit");
+				Integer choice = input.nextInt();
+				
+				switch (choice) {
+				case 1: 
+				System.out.println("Please enter the animal sex");
+				String new_sex = input.nextLine();
+				animal.set_Animal_Sex(new_sex);
+					break;
+				case 2: 
+					System.out.println("Please enter the animal name");
+					String new_name = input.nextLine();
+					animal.set_Animal_Name(new_name);
+					System.out.println("Name successfully updated");
+					break;
+				case 3:
+					System.out.println("The details have been succesfully updated");
+					begin = false;
+					break;
+				}
+				}
+				}
+				catch (NumberFormatException e) {
+					e.getCause();
+					System.out.println("Fatal exception occurred");
+					edit_Animal_Details(animal);
+				}
+			
+				
+			}while (begin = true);
+			
+			
+		
+			
+			
+}
 		
 	
 	public String get_Animal_Id() {
@@ -264,12 +306,4 @@ public class Animals {
 }
 
 
-
-	
-	
-	
-	
-
-
-	
 
