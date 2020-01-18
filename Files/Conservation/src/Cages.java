@@ -1,47 +1,27 @@
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 public class Cages {
 	String external_location = "";
 	public Cages() {
 	}
-	
+	public void file_external_path() { /*So since the data is being cross-called, there requires a way to refresh the changing file location, this method will do this.*/
+		String file_location = "";
+		external object = new external();
+		 external_location = object.filepath; /*load in the directory file declared before into a string*/
+	}
 	public void begin() throws IOException {
-		 /* so call in order to process the string for loading into a data structure*/
-		Scanner input = new Scanner(System.in);
-		System.out.println("Please define the location of the file");
-		external_location = input.nextLine();
+	file_external_path(); /* so call in order to process the string for loading into a data structure*/
+	try {
 		
-		if (external_location.contains("Cages")) {
-	load_file();
-		}
-		else {
-			System.out.println("The defined location does not match the required file, please re-define it");
-			external_location = input.nextLine();
-		}
-	}
-	public void load_file() {
-		ArrayList<String> arraylist = new ArrayList<>();
-		try (Scanner s = new Scanner(new File(external_location)).useDelimiter("\\s*,\\s*")) {
-		    // \\s* in regular expressions means "any number or whitespaces".
-		    // included the whitespaces as part of the data it extracted.
-		    while (s.hasNext()) {
-		        arraylist.add(s.next());
-		    }
-		}
 	
-		
-		catch (IOException e) {
-			System.out.println("A fatal error has occurred, aborting program.");
-			e.getCause();
-			e.getStackTrace();
-			System.exit(0);
-		}
-		
-		    }
+	List<String> lines = Files.readAllLines(Paths.get(external_location)); /*load the file into the list*/
 	}
-
+	catch (IOException e) {
+	e.getStackTrace();	
+	}}
 	
-
+	
+}

@@ -63,26 +63,29 @@ public class external { /*this will display information to the main class in ord
 		while ((currentline = objReader.readLine()) != null) {
 			if (currentline.contentEquals(",")) {
 				change_data = true;
-			System.out.println(currentline);
 			}
 		
-		if (filepath.contains("Cages.txt")) {
+		if (filepath.contains("Cages")) {
 			Cages cages = new Cages();
 			cages.begin(); /*call method loader based on text file*/
 		}
-		if (filepath.contains("Animals.txt")) { /*decide what object to load depending on what file is loaded*/
+		if (filepath.contains("Animals")) {
 			Animals animals = new Animals();
 			animals.begin();
 		}
-		if (filepath.contains("Keepers.txt")) {
+		if (filepath.contains("Keepers")) {
 			Keepers keepers = new Keepers();
 			keepers.begin();
 		}
-		if (filepath.contains("Enclosures.txt")) {
+		if (filepath.contains("Enclosures")) {
 			Enclosures enclosures = new Enclosures();
 			enclosures.begin();
 		}
-		
+		else if (!filepath.contains((CharSequence) match_conditions)) { /*cast char sequence to match search*/
+			System.out.println("No file has been located.");
+			System.out.println("Please re-run the program again, ensuring that you have defined the correct filepath location.");
+			System.exit(0);
+		}
 		}
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -98,5 +101,13 @@ public class external { /*this will display information to the main class in ord
 			}
 		}
 		}
-	}
+	
+		public String ID_Gen(String generate) { //use this for generating ID's for animal assignments
+			int random = (int)Math.ceil(Math.random() * 1000);
+			String generate_id = generate + random;
+			return generate_id;
+		}
+}
+
+
 
