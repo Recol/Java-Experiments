@@ -5,9 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-import college.Animal;
-import college.Cage;
-import college.Validate;
 
 
 
