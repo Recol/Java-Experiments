@@ -4,6 +4,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+import college.Animal;
+import college.Cage;
+
 
 
 public class external { /*this will display information to the main class in order to
@@ -101,6 +104,15 @@ public class external { /*this will display information to the main class in ord
 			}
 		}
 		}
+	
+	public static boolean validateCageType(Cages cage, Animals animal) {
+		if(cage.getCageType().equals("None")) {
+			return true;
+		} else if(animalCompatibility(cage.getCageType(), animal.get_Animal_Species())) {
+			return true;
+		}
+		return false;
+	}
 	
 		public String ID_Gen(String generate) { //use this for generating ID's for animal assignments
 			int random = (int)Math.ceil(Math.random() * 1000);

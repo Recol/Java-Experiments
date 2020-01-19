@@ -1,8 +1,11 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,9 +19,9 @@ public class File_IO {
 	private File cage_File;
 	private File Enclosure_File;
 	
-	private FileReader in;
-	private FileWriter write;
-	private PrintWriter o_put;
+	private BufferedReader in;
+	private BufferedWriter write;
+	private BufferedWriter o_put;
 	
 	
 	public File_IO() {
@@ -33,8 +36,8 @@ public class File_IO {
 		try {
 			
 		
-		write = new FileWriter(Enclosure_File);
-		o_put = new PrintWriter(write);
+		write = new BufferedWriter(Enclosure_File);
+		o_put = new BufferedWriter(write);
 		
 		for (Enclosures i : enclosure_list) {
 			if (enclosure_list != null) {
@@ -54,8 +57,8 @@ public class File_IO {
 	
 	public void write_Animal_Details(ArrayList<Animals> animal_List) {
 		try {
-			write = new FileWriter(animal_File);
-			o_put = new PrintWriter(write);
+			write = new BufferedWriter(animal_File);
+			o_put = new BufferedWriter(write);
 			
 			for(Animals i : animal_List) {
 				if(animal_List != null) {
@@ -102,7 +105,7 @@ public class File_IO {
 		public void write_Cage_Details(ArrayList<Cages> cage_List) {
 			try {
 				write = new FileWriter(cage_File);
-				o_put = new PrintWriter(write);
+				o_put = new BufferedWriter(write);
 				
 				for(Cages i : cage_List) {
 					if(cage_List != null) {
