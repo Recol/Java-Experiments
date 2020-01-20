@@ -20,6 +20,7 @@ public class Cages {
 	private LinkedList<Animals> animals_caged;
 	private LinkedList<Keepers> keepers_caged;
 	external object = new external();
+	Animals animal = new Animals();
 
 	public Cages() {
 		keepers_caged = new LinkedList<Keepers>();
@@ -51,7 +52,10 @@ public class Cages {
 		String si = "";
 		Integer max_K = 0;
 		String option;
-		
+		/**
+		 * Defer the usage of object data types, in order to ensure check integrity with the switch case.
+		 * Match the values to their assignments accordingly. 
+		 */
 		Scanner input = new Scanner(System.in);
 		cage_menu();
 		System.out.println("Please input your menu choice, or alternatively press E to exit");
@@ -84,7 +88,10 @@ public class Cages {
 				max_K = 4;
 				break;
 			}
-		
+		/**
+		 * Call and load in the set assignments, and return them as a single object.
+		 * 
+		 */
 			set_Cage_ID(object.ID_Gen("GC"));
 			set_Cage_Size(si);
 			set_Cage_Type("Null");
@@ -94,22 +101,26 @@ public class Cages {
 		return cage;
 	}
 	
-	
+	/**
+	 * Call match conditions for assigning animals to cages, assuming they pass the compatibility check.
+	 * @param cage
+	 * @param animal_enc
+	 */
 	public void assign_Animal(Cages cage, Animals animal_enc) {
 		Scanner input = new Scanner(System.in);
 		if(animals_caged.size() >= get_Max_Animals()) {
 			System.err.println("This cage is full");
 		} else if(cage.animals_caged.contains(animal_enc)){
 			System.err.println("This animal is already present in this cage");
-		} else if(!external.validateCageType(cage, animal_enc)) {
+		} else if(!external.validate_Cage_Type(cage, animal_enc)) {
 			System.err.println("This animal is incompatible for this cage");
 		} else {
-			cage.cagedAnimals.add(animal);
+			cage.animals_caged.add(animal_enc);
 			if(cage.getCageType().equals("None")) {
-				cage.defineCageType(cage, animal);
+				defineCageType(cage, animal_enc);
 			}
-			animal.setCageAssignment(cage.getCageId());
-			System.out.println(animal.getAnimalName() + " the " + animal.getAnimalSpecies() + " was successfully added to cage " + cage.getCageId());
+			set_Cage_Assignment(cage.get_Cage_ID());
+			System.out.println(animal.getanimal_Name() + " the " + animal.get_Animal_Species() + " was successfully added to cage " + cage.get_Cage_ID());
 		}
 	}
 	
@@ -120,17 +131,17 @@ public class Cages {
 	 * If they can share, set type to species1 and species2
 	 * If not, set type to species
 	 */
-	public void defineCageType(Cage cage, Animal animal) {
-		if(animal.getAnimalSpecies().equals("Zebra") || animal.getAnimalSpecies().equals("Marmoset-Monkey")) {
-			cage.setCageType("Zebras and Marmoset Monkeys");
-		} else if(animal.getAnimalSpecies().equals("Rabbit") || animal.getAnimalSpecies().equals("Guinea-Pig")) {
-			cage.setCageType("Rabbits and Guinea Pigs");
-		} else if(animal.getAnimalSpecies().equals("Horse") || animal.getAnimalSpecies().equals("Donkey")) {
-			cage.setCageType("Horses and Donkeys");
-		} else if(animal.getAnimalSpecies().equals("Bearded-Dragon") || animal.getAnimalSpecies().equals("Lizard")) {
-			cage.setCageType("Bearded Dragons and Lizards");
+	public void defineCageType(Cages cage, Animals animal) {
+		if(animal.get_Animal_Species().equals("Zebra") || animal.get_Animal_Species().equals("Marmoset-Monkey")) {
+			cage.set_Cage_Type("Zebras and Marmoset Monkeys");
+		} else if(animal.get_Animal_Species().equals("Rabbit") || animal.get_Animal_Species().equals("Guinea-Pig")) {
+			cage.set_Cage_Type("Rabbits and Guinea Pigs");
+		} else if(animal.get_Animal_Species().equals("Horse") || animal.get_Animal_Species().equals("Donkey")) {
+			cage.set_Cage_Type("Horses and Donkeys");
+		} else if(animal.get_Animal_Species().equals("Bearded-Dragon") || animal.get_Animal_Species().equals("Lizard")) {
+			cage.set_Cage_Type("Bearded Dragons and Lizards");
 		} else {
-			cage.setCageType(animal.getAnimalSpecies() + "s");
+			cage.set_Cage_Type(animal.get_Animal_Species() + "s");
 		}
 	}
 	

@@ -4,8 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import college.Animal;
-import college.Cage;
 
 
 
@@ -40,20 +38,25 @@ public class external { /*this will display information to the main class in ord
 		match_conditions.add("Cages");
 		match_conditions.add("Enclosures");
 		match_conditions.add("Animals");
-		
+		/**
+		 * Afterwards, the respective file will be loaded in according to the set conditions are matched with the name of the text file.
+		 */
 		System.out.println("Please define the location of where the file is");
 		Scanner file_location = new Scanner(System.in);
 		filepath = file_location.nextLine(); 
-	
+	/**
+	 * Call the next line entry scanner input for the declared text file diretory location.
+	 */
 		indent();
 		if (!filepath.contentEquals("")) {
-			
+			/*if the string contains the set conditions anywhere in the string*/
 		System.out.println("Operation completed successfully");
 		}
 		else {
 			System.out.println("There appears to have been an error, please redefine the location of the file");
 			file_location.nextLine();
 		}
+		/*catch any input which does not match the set conditon*/
 	/*Begin file reader*/
 		BufferedReader objReader = null;
 
@@ -62,12 +65,16 @@ public class external { /*this will display information to the main class in ord
 		String currentline;
 		
 		objReader = new BufferedReader(new FileReader(filepath));
-		
+		/**
+		 * open a filereader object with the declared string location, specifying the text file location
+		 */
 		while ((currentline = objReader.readLine()) != null) {
 			if (currentline.contentEquals(",")) {
 				change_data = true;
 			}
-		
+			/**
+			 * Open a boolean for further expansion, whereby files can be written on the stream ethereally.
+			 */
 		if (filepath.contains("Cages")) {
 			Cages cages = new Cages();
 			cages.begin(); /*call method loader based on text file*/
@@ -84,11 +91,17 @@ public class external { /*this will display information to the main class in ord
 			Enclosures enclosures = new Enclosures();
 			enclosures.begin();
 		}
+		
+		
+		/*
+		 * A charsequence is used here to cross-compare a set value, as it is not a string by default, potentially loading casting exceptions
+		 * by simply declaring a string condition.
+		 */
 		else if (!filepath.contains((CharSequence) match_conditions)) { /*cast char sequence to match search*/
 			System.out.println("No file has been located.");
 			System.out.println("Please re-run the program again, ensuring that you have defined the correct filepath location.");
 			System.exit(0);
-		}
+		} 
 		}
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -105,7 +118,7 @@ public class external { /*this will display information to the main class in ord
 		}
 		}
 	
-	public static boolean validateCageType(Cages cage, Animals animal) {
+	public static boolean validate_Cage_Type(Cages cage, Animals animal) {
 		if(cage.getCageType().equals("None")) {
 			return true;
 		} else if(animalCompatibility(cage.getCageType(), animal.get_Animal_Species())) {
@@ -113,13 +126,24 @@ public class external { /*this will display information to the main class in ord
 		}
 		return false;
 	}
-	
+	/**
+	 * Utilise a boolean to prevent cross-checking cage compatibility, and simply call if the value is true or not in other classes.
+	 * E.g. (if validate_Cage_Type == true {
+	 * do {
+	 * (logic)
+	 * }}
+	 * @param generate
+	 * @return
+	 */
 		public String ID_Gen(String generate) { //use this for generating ID's for animal assignments
-			int random = (int)Math.ceil(Math.random() * 1000);
+			int random = (int)Math.ceil(Math.random() * 100);
 			String generate_id = generate + random;
 			return generate_id;
 		}
 }
-
+			/**
+			 * Generate the math.ceil method as a primitive int, and generate a random number multiplied by 100.
+			 * Afterwards, combine the generation with the declared returned String entry from other classes, then return the ID.
+			 */
 
 
