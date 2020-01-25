@@ -11,12 +11,19 @@ public class Main {
 	
 	
 		external external_object = new external();
+		Animals animal = new Animals();
+		Keepers keeper = new Keepers();
 		
 		external_object.menu_display(); /*output menu*/
 		external_object.indent();
 		
 		Scanner input = new Scanner(System.in);
 		
+		
+		/*
+		 * This menu will be responsible for loading in the required menu, and allowing the user to select an option.
+		 * Each method will be loaded accordingly.
+		 */
 		System.out.println("Please input your menu choice");
 		do {
 			System.out.println("Menu");
@@ -43,6 +50,17 @@ public class Main {
 				File_IO.readAnimalData();
 				System.out.println("");
 				System.out.println("Animal data read");
+				break;
+			case "5":
+				File_IO.readAnimalData();
+				File_IO.readCageData();
+				File_IO.readEnclosureData();
+				File_IO.readKeeperData();
+				System.out.println("");
+				System.out.println("All the details have been loaded.");
+			case "8":
+				keeper.keeper_details();
+				System.out.println("The keeper has been assigned to the cage.");
 			}
 	}while (!menu.equals("10"));
 		}

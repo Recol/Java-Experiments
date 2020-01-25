@@ -23,8 +23,8 @@ public class external { /*this will display information to the main class in ord
 		System.out.println("1: List category of enclosures");
 		System.out.println("2: List all the available cages");
 		System.out.println("3: List all available keepers");
-		System.out.println("4: List category of animals");
-		System.out.println("5: List animal details (animal, cage, and keeper details");
+		System.out.println("4: List details of animals");
+		System.out.println("5: List All Details (animal, cage, and keeper details");
 		System.out.println("6: Add an animal to a cage");
 		System.out.println("7: Remove an animal from a cage");
 		System.out.println("8: Assign a keeper to a cage");
