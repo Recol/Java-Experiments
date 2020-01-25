@@ -1,12 +1,14 @@
+
 import java.util.*; /*Import all to avoid non-defined method implementations for Collections*/
 public class Main {
 
+	
 	@SuppressWarnings("resource")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 	
 		String menu = "";
 		String option = "";
-		String filepath = ""; /*allow the user to identify the filepath*/
+	
 	
 		external external_object = new external();
 		
@@ -17,20 +19,32 @@ public class Main {
 		
 		System.out.println("Please input your menu choice");
 		do {
+			System.out.println("Menu");
+			
+			external_object.indent();
+			external_object.menu_display(); /*output menu*/
 			menu = input.nextLine();
 			switch (menu) {
 			case "1":
-				external_object.filereader();
-				external_object.menu_display();
+				
+				File_IO.readEnclosureData();
 				break;
 				
 			case "2":
-				
+				File_IO.readCageData();
+				System.out.println("Cage data loaded");
 				break;
 			case "3":
-		break;
-		}
-	}while (!menu.equals("11"));
+				File_IO.readKeeperData();
+				System.out.println("");
+				System.out.println("Keeper data loaded");
+				break;
+			case "4":
+				File_IO.readAnimalData();
+				System.out.println("");
+				System.out.println("Animal data read");
+			}
+	}while (!menu.equals("10"));
 		}
 		
 	
