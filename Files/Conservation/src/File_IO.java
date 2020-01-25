@@ -13,14 +13,14 @@ import org.apache.commons.lang3.StringUtils;
 
 public class File_IO {
 
-	static boolean max_reached = true;
+	static boolean max_reached = false;
 
 	public File_IO() {
 
 	}
 	
 	
-	public static void readAnimalData() throws Exception {
+	public void readAnimalData() throws Exception {
 		  FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Animals.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -43,7 +43,7 @@ public class File_IO {
 	        System.out.println("Data: "+sb.toString());
 	    }
 	
-	public static void readKeeperData() throws Exception {
+	public void readKeeperData() throws Exception {
 		  FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Keepers.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -66,7 +66,7 @@ public class File_IO {
 	        System.out.println("Data: "+sb.toString());
 	    }
 	
-	public static void readEnclosureData() throws Exception {
+	public void readEnclosureData() throws Exception {
 		  FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Enclosures.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -89,7 +89,7 @@ public class File_IO {
 	        System.out.println("Data: "+sb.toString());
 	    }
 	
-	public static void readCageData() throws Exception {
+	public void readCageData() throws Exception {
 		  FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Cages.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -156,7 +156,7 @@ public class File_IO {
 	 * 
 	 */
 	@SuppressWarnings("unlikely-arg-type")
-	public static void check_max_cage_assignment(String entry) throws Exception {
+	public void check_max_cage_assignment(String entry) throws Exception {
 		FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Cages.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -172,26 +172,36 @@ public class File_IO {
 	            	 sb.append("\nNumber Of Keepers: ").append(StringUtils.trim(max_cage_check[3]));
 	            	 	
 	            	 
-	            	 List<String> check_entry = Arrays.asList(max_cage_check[1]);
-	            	 List<String> check = Arrays.asList(max_cage_check[3]);
-	            	 		if (check.contains("4") && check_entry.equals(entry));
-	            	 	
-	            	 		System.out.println("The maximum amount of keepers has been reached.");
-	            
-	            	 		if (!check_entry.equals(entry)) {
-	            	 			System.out.println("The ID cannot be found");
-	            	 		}
-	            } 
-	           
-	            else {
-	                System.out.println("The maximum has not been reached");
-	                max_reached = false;
 	            }
+	            List<String> check_entry = Arrays.asList(max_cage_check[1]);
+           	 List<String> check = Arrays.asList(max_cage_check[3]);
+           	 	
+           	 	do {
+           	 	 if (!check.contains("4")){
+ 	                System.out.println("The maximum has not been reached");
+ 	                max_reached = false;
+ 	                break;
+ 	            }     
+ 	            
+            
+	             if (check.contains("4")){
+	                System.out.println("The maximum has been reached.");
+	                max_reached = true;
+	                break;
+	             }     
+	            
+
+       	 		 if (!check_entry.contains(entry) ) {
+       	 			System.out.println("The ID cannot be found");
+       	 			break;
+       	 		}
 	      
-	        }
-	       
+	        }while (check_entry.equals(entry));
+	              
+	}
 	}
 }
+	
 	
 
 

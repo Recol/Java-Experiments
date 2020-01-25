@@ -58,7 +58,7 @@ public class Keepers {
 		System.out.println("What is the second name of the keeper?");
 		last_name = input.nextLine();
 		try {
-			File_IO.check_max_cage_assignment(cage_ID);
+			file_runner.check_max_cage_assignment(cage_ID);
 		} catch (Exception e) {
 			System.out.println("A fatal error has occurred");
 			e.printStackTrace();
@@ -66,14 +66,16 @@ public class Keepers {
 		if (File_IO.max_reached = true) {
 			System.out.println("The maximum amount of keepers has been reached for this cage.");
 			keeper_details();
-		
+		}
 		if (File_IO.max_reached = false) {
 			System.out.println("The maximum amount has not been reached");
 			String collective = (cage_ID + "," + first_name + "," + last_name);
 			File_IO.writeKeeperData(collective);
 		}
+		
 		}
-	}
+	
+	
 	
 	
 	

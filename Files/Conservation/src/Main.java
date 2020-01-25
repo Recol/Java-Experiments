@@ -13,6 +13,7 @@ public class Main {
 		external external_object = new external();
 		Animals animal = new Animals();
 		Keepers keeper = new Keepers();
+		File_IO file = new File_IO();
 		
 		external_object.menu_display(); /*output menu*/
 		external_object.indent();
@@ -34,33 +35,35 @@ public class Main {
 			switch (menu) {
 			case "1":
 				
-				File_IO.readEnclosureData();
+				file.readEnclosureData();
 				break;
 				
 			case "2":
-				File_IO.readCageData();
+				file.readCageData();
 				System.out.println("Cage data loaded");
 				break;
 			case "3":
-				File_IO.readKeeperData();
+				file.readKeeperData();
 				System.out.println("");
 				System.out.println("Keeper data loaded");
 				break;
 			case "4":
-				File_IO.readAnimalData();
+				file.readAnimalData();
 				System.out.println("");
 				System.out.println("Animal data read");
 				break;
 			case "5":
-				File_IO.readAnimalData();
-				File_IO.readCageData();
-				File_IO.readEnclosureData();
-				File_IO.readKeeperData();
+				file.readAnimalData();
+				file.readCageData();
+				file.readEnclosureData();
+				file.readKeeperData();
 				System.out.println("");
 				System.out.println("All the details have been loaded.");
+				break;
 			case "8":
 				keeper.keeper_details();
 				System.out.println("The keeper has been assigned to the cage.");
+				break;
 			}
 	}while (!menu.equals("10"));
 		}
