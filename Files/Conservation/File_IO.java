@@ -15,6 +15,7 @@ public class File_IO {
 
 	boolean max_reached = false;
 
+
 	public File_IO() {
 
 	}
@@ -42,6 +43,47 @@ public class File_IO {
 	        }
 	        System.out.println("Data: "+sb.toString());
 	    }
+	
+	public void check_animal_compatibility(String entry) throws Exception {
+	      boolean  danger = false;
+		FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Animals.txt");
+	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
+	        String strline;
+	        StringBuffer sb = new StringBuffer();
+	        while ((strline = br.readLine()) != null)
+	        {
+	            String[] animal_check=StringUtils.split(strline, ",");
+	            if(animal_check.length != 0){
+	            	 
+	            	sb.append("\nCage ID: ").append(StringUtils.trim(animal_check[0]));
+	            	 sb.append("\nAnimal ID: ").append(StringUtils.trim(animal_check[1]));
+	            	 sb.append("\nSpecies Type: ").append(StringUtils.trim(animal_check[2]));
+	            	 sb.append("\nDanger Rating: ").append(StringUtils.trim(animal_check[3]));
+	            	 	
+	            
+	            }
+           	 List<String> check_a = Arrays.asList(animal_check[3]);
+	            List<String> count = Arrays.asList(animal_check[1]);
+	        
+	            if (check_a.isEmpty()) 
+	             {
+	               System.out.println("The danger rating is not allowed");
+	                 danger = true;
+	                 break;
+	            
+	        }
+	        
+ 	                System.out.println("The danger rating is allowed");
+ 	               danger = false;
+ 	                break;
+	            
+	        }
+	        Animals animal = new Animals();
+	        animal.danger(danger);
+	}
+           	 	
+	        
+	
 	
 	public void readKeeperData() throws Exception {
 		  FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Keepers.txt");

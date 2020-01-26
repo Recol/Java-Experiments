@@ -28,7 +28,7 @@ public class external { /*this will display information to the main class in ord
 		System.out.println("6: Add an animal to a cage");
 		System.out.println("7: Remove an animal from a cage");
 		System.out.println("8: Assign a keeper to a cage");
-		System.out.println("9: Unassign a keeper to a cage");
+		System.out.println("9: Removed a keeper");
 		System.out.println("10: Exit and save all current details");	
 	
 }
@@ -106,15 +106,7 @@ public class external { /*this will display information to the main class in ord
 		}
 		}
 	
-	public static boolean validateCageType(Cages cage, Animals animal) {
-		
-		if(cage.getCageType().equals("None")) {
-			return true;
-		} else if((cage.getCageType(), animal_obj.get_Animal_Species())) {
-			return true;
-		}
-		return false;
-	}
+
 	
 		public String ID_Gen(String generate) { //use this for generating ID's for animal assignments
 			int random = (int)Math.ceil(Math.random() * 100);
@@ -124,15 +116,10 @@ public class external { /*this will display information to the main class in ord
 
 
 			public void assignment() {
-				String entry;
+				String entry = null;
 				arr.add(entry);
 			}
 			
-			public void set_assignment(String entry) {
-				this.entry = entry;
-			}
-
 }
-
 
 
