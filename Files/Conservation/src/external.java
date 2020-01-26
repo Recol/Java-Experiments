@@ -106,33 +106,20 @@ public class external { /*this will display information to the main class in ord
 		}
 		}
 	
-	public static boolean validateCageType(Cages cage, Animals animal) {
-		
-		if(cage.getCageType().equals("None")) {
-			return true;
-		} else if((cage.getCageType(), animal_obj.get_Animal_Species())) {
-			return true;
-		}
-		return false;
-	}
+
 	
 		public String ID_Gen(String generate) { //use this for generating ID's for animal assignments
-			int random = (int)Math.ceil(Math.random() * 1000);
+			int random = (int)Math.ceil(Math.random() * 100);
 			String generate_id = generate + random;
 			return generate_id;
 		}
 
 
 			public void assignment() {
-				String entry;
+				String entry = null;
 				arr.add(entry);
 			}
 			
-			public void set_assignment(String entry) {
-				this.entry = entry;
-			}
-
 }
-
 
 

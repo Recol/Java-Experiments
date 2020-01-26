@@ -15,7 +15,6 @@ public class Main {
 		Keepers keeper = new Keepers();
 		File_IO file = new File_IO();
 		
-		external_object.menu_display(); /*output menu*/
 		external_object.indent();
 		
 		Scanner input = new Scanner(System.in);
@@ -25,7 +24,7 @@ public class Main {
 		 * This menu will be responsible for loading in the required menu, and allowing the user to select an option.
 		 * Each method will be loaded accordingly.
 		 */
-		System.out.println("Please input your menu choice");
+
 		do {
 			System.out.println("Menu");
 			
@@ -59,6 +58,9 @@ public class Main {
 				file.readKeeperData();
 				System.out.println("");
 				System.out.println("All the details have been loaded.");
+				break;
+			case "6":
+				animal.new_Animal();
 				break;
 			case "8":
 				keeper.keeper_details();
