@@ -15,8 +15,7 @@ public class external { /*this will display information to the main class in ord
 						override problems of static methods*/
 	boolean change_data = false; //used to morph to different data structures
 	String filepath = "";
-	List<String> arr;;
-	
+	List<String> arr;	
 
 	public void menu_display() {
 		/*List all the outputs in a single method to prevent redundancy*/
@@ -28,7 +27,7 @@ public class external { /*this will display information to the main class in ord
 		System.out.println("6: Add an animal to a cage");
 		System.out.println("7: Remove an animal from a cage");
 		System.out.println("8: Assign a keeper to a cage");
-		System.out.println("9: Removed a keeper");
+		System.out.println("9: Remove a keeper");
 		System.out.println("10: Exit and save all current details");	
 	
 }
@@ -44,7 +43,9 @@ public class external { /*this will display information to the main class in ord
 		match_conditions.add("Cages");
 		match_conditions.add("Enclosures");
 		match_conditions.add("Animals");
-		
+		/*
+		 * Method can be used in the future for custom defining of file locations, however difficult to handle with the filestream.
+		 */
 		System.out.println("Please define the location of where the file is");
 		Scanner file_location = new Scanner(System.in);
 		filepath = file_location.nextLine(); 

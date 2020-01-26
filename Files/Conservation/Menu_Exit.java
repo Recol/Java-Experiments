@@ -1,5 +1,5 @@
 
-public abstract class Menu_Exit {
+public class Menu_Exit {
 	/*
 	 * Second abstract implementation to close the program when the 10th case is selected on the main menu.
 	 */

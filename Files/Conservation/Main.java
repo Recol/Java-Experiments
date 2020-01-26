@@ -1,6 +1,6 @@
 
 import java.util.*; /*Import all to avoid non-defined method implementations for Collections*/
-public class Main {
+class Main {
 
 	
 	@SuppressWarnings("resource")
@@ -67,7 +67,8 @@ public class Main {
 				System.out.println("The keeper has been assigned to the cage.");
 				break;
 			case "9":
-				
+				keeper.remove_keeper();
+				break;
 			case "10":
 				Derived d = new Derived();
 				d.exit();

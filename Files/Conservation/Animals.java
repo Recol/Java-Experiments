@@ -25,7 +25,9 @@ public class Animals {
 		 this.external_location = object.filepath; /*load in the directory file declared before into a string*/
 	}
 	
-	
+	/*Receiver to handle boolean changes with the danger rating.
+	 * 
+	 */
 	public void danger(boolean danger) {
 		this.danger = danger;
 	}
@@ -37,11 +39,14 @@ public class Animals {
 	
 	/**
 	 *Load data into the hashmap, for future expansion, declare danger ratings manually.
-	 * @param animal_enc
+	 * 
 	 */
 	
 	
-	
+	/*
+	 * Method to assign danger ratings respectively to each animal.
+	 * Store in a HashMap for implementation if desired for loading instead.
+	 */
 	
 	public void animal_compatibility() {
 		String crocodile = "";
@@ -100,6 +105,9 @@ public class Animals {
 			}
 	}
 	
+	/*
+	 * Method used to create a new animal, strings are collected for output to File_IO.
+	 */
 	public void new_Animal() {
 	Scanner input = new Scanner(System.in); 
 	System.out.println("Please enter the animal family:");
