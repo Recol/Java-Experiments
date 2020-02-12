@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Animals {
 	
-	
+	private int entry = 0;
 	private String animal_Name;
 	private String animal_ID;
 	private String animal_Family;
@@ -25,7 +25,9 @@ public class Animals {
 		 this.external_location = object.filepath; /*load in the directory file declared before into a string*/
 	}
 	
-	
+	/*Receiver to handle boolean changes with the danger rating.
+	 * 
+	 */
 	public void danger(boolean danger) {
 		this.danger = danger;
 	}
@@ -37,11 +39,14 @@ public class Animals {
 	
 	/**
 	 *Load data into the hashmap, for future expansion, declare danger ratings manually.
-	 * @param animal_enc
+	 * 
 	 */
 	
 	
-	
+	/*
+	 * Method to assign danger ratings respectively to each animal.
+	 * Store in a HashMap for implementation if desired for loading instead.
+	 */
 	
 	public void animal_compatibility() {
 		String crocodile = "";
@@ -100,6 +105,22 @@ public class Animals {
 			}
 	}
 	
+	
+	/*
+	 * Used to remove animals based on matching a cage ID.
+	 * String is passed into the File_IO for finding the ID.
+	 */
+	public void delete_animal() throws IOException {
+		String filepath = "";
+		Scanner file_route = new Scanner(System.in);
+		System.out.println("Please enter the cage ID to remove where the animal is located");
+		filepath = file_route.nextLine();
+		File_IO.removeAnimal(filepath);
+	}
+	
+	/*
+	 * Method used to create a new animal, strings are collected for output to File_IO.
+	 */
 	public void new_Animal() {
 	Scanner input = new Scanner(System.in); 
 	System.out.println("Please enter the animal family:");
@@ -107,9 +128,7 @@ public class Animals {
 	System.out.println("Reptile");
 		animal_Family = input.nextLine();	
 	do {
-		
-		System.out.println("An invalid category has been entered, please enter it again");
-		animal_Family = input.nextLine();
+	
 		
 		if (animal_Family.equals("Mammal") || animal_Family.equals("Reptile")) {
 			break;
@@ -118,14 +137,19 @@ public class Animals {
 	
 		if (animal_Family.equals("Mammal")) {
 			mammal_selector();
+			animal_compatibility();
 			
 		}
 		
 		if (animal_Family.equals("Reptile")) {
 			reptile_selector();
+			animal_compatibility();
 			
 		}
-	
+		else if (!animal_Family.equals("Mammals") || (!animal_Family.equals("Reptile"))){
+			System.out.println("An invalid category has been entered, please enter it again");
+			animal_Family = input.nextLine();
+		}
 	System.out.println("Please enter the cage ID");
 		cage_ID =input.nextLine();
 		System.out.println("Please enter the animal ID");
@@ -140,7 +164,7 @@ public class Animals {
 	public void send_animal() {
 		animal_compatibility();
 		
-		String collective = (cage_ID + "," + animal_ID + "," + animal_Family + "," + animal_Species);
+		String collective = (cage_ID + "," + animal_ID + "," + animal_Family + "," + animal_Species + "," + entry);
 		File_IO.writeAnimalData(collective);
 	}
 	
@@ -157,6 +181,7 @@ public class Animals {
 		if (animal_Species.equals("Snake") || animal_Species.equals("Bearded Dragon") || animal_Species.equals("Lizard") || animal_Species.equals("Crocodile")) {
 			System.out.println("Assigned.");
 			animal_Species = reptile.nextLine();
+			return;
 		}
 		else if (!animal_Species.equals("Snake") || !animal_Species.equals("Bearded Dragon") || !animal_Species.equals("Lizard") || !animal_Species.equals("Crocodile")) {
 			System.out.println("Invalid choice, please try again.");
@@ -177,10 +202,12 @@ public class Animals {
 		if (animal_Species.equals("Zebra") || animal_Species.equals("Marmoset Monkey") || animal_Species.equals("Ape") || animal_Species.equals("Rabbit")) {
 			System.out.println("Assigned.");
 			animal_Species = mammal.nextLine();
+			return;
 		}
 		else if (!animal_Species.equals("Zebra") || !animal_Species.equals("Marmoset Monkey") || !animal_Species.equals("Ape") || !animal_Species.equals("Rabbit")) {
 			System.out.println("Invalid choice, please try again.");
 			animal_Species = mammal.nextLine();
+			
 		}
 		}
 	}

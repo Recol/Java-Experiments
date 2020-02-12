@@ -4,7 +4,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
-public class Enclosures {
+/*package*/ class Enclosures {
 	public Enclosures() {}
 	String enclosure_size;
 	

@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * @author deckl
+ *
+ */
 public class Keepers {
 	private String keeper_Id;
 	private String first_name;
@@ -27,6 +31,9 @@ public class Keepers {
 		external object = new external();
 		 external_location = object.filepath; /*load in the directory file declared before into a string*/
 	}
+	/**
+	 * @throws IOException
+	 */
 	public void begin() throws IOException {
 		file_external_location(); /* so call in order to process the string for loading into a data structure*/
 	try {
@@ -79,19 +86,18 @@ public class Keepers {
 		}
 	
 	
-	
-	
-	
-	
-
-
-	public ArrayList<String> get_Cage_Assignment() {
-		return cage_Assignment;
+	/*
+	 * Filter by second name to identify a unique entry, or remove all assocations.
+	 */
+	public void remove_keeper() throws IOException {
+		
+		String second_entry = "";
+		Scanner input = new Scanner(System.in);
+		System.out.println("What is the second name of the keeper?");
+		second_entry = input.nextLine();
+		File_IO.removeKeeper(second_entry);
 	}
-
-	public void setCageAssignment(ArrayList<String> cage_Assignment) {
-		this.cage_Assignment = cage_Assignment;
-	}
+	
 }
 
 	

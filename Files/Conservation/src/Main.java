@@ -1,6 +1,7 @@
 
+import java.io.Console;
 import java.util.*; /*Import all to avoid non-defined method implementations for Collections*/
-public class Main {
+class Main {
 
 	
 	@SuppressWarnings("resource")
@@ -62,13 +63,25 @@ public class Main {
 			case "6":
 				animal.new_Animal();
 				break;
+			
+			case "7":
+				animal.delete_animal();
+				break;
 			case "8":
 				keeper.keeper_details();
 				System.out.println("The keeper has been assigned to the cage.");
 				break;
+			case "9":
+				keeper.remove_keeper();
+				break;
+			case "10":
+				Derived d = new Derived();
+				d.exit();
 			}
 	}while (!menu.equals("10"));
-		}
 		
-	
+	}
+		
+
+
 	}
