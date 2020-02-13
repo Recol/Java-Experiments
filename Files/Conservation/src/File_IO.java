@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 
 
 public class File_IO {
-
+	int total = 0;
 	boolean max_reached = false;
 
 
@@ -298,6 +298,7 @@ public class File_IO {
 	 */
 	@SuppressWarnings("unlikely-arg-type")
 	public void check_max_cage_assignment(String entry) throws Exception {
+		
 		FileInputStream f= new FileInputStream("C:/Users/deckl/eclipse-workspace/Clyde-Conservation/src/Cages.txt");
 	        BufferedReader br = new BufferedReader(new InputStreamReader(f));
 	        String strline;
@@ -317,6 +318,7 @@ public class File_IO {
 	            List<String> check_entry = Arrays.asList(max_cage_check[1]);
            	 List<String> check = Arrays.asList(max_cage_check[3]);
 	            List<String> count = Arrays.asList(max_cage_check[1]);
+	            
 
            	 	for (int i = 0; i < count.size(); i++) 
 	            {
@@ -329,8 +331,10 @@ public class File_IO {
  	            
             
 	             if (check.contains("4")){
-	                System.out.println("The maximum has been reached.");
+	                System.out.println("Count occurrence occurred.");
+	                total++;
 	                break;
+	                
 	             }     
            	 	
 
@@ -343,9 +347,16 @@ public class File_IO {
 		
 	            }
        	 		
-           	 	
+           	 if (total == 4) {
+           		 System.out.println("Error, the maximum amount has been reached");
+           		 System.out.println("System aborting due to the maximum being accrued.");
+           		 System.exit(0);
+        
+           	 }
            	 	}
 	        }
+
+
 }
 
 	
