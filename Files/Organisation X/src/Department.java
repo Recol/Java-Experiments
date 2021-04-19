@@ -1,7 +1,7 @@
 
 public class Department {
-	String department_sales = "Sales";
-	String department_marketing = "Marketing";
+	String department_sales = Messages.getString("Department.0"); //$NON-NLS-1$
+	String department_marketing = Messages.getString("Department.1"); //$NON-NLS-1$
 
 	public Department() {
 	}
